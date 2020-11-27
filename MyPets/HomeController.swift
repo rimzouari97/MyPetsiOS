@@ -20,6 +20,7 @@ class HomeController : UIViewController {
         performSegue(withIdentifier: "mainHomeSegue", sender: "nil")
     }
     
+    
     @IBAction func Register(_ sender: Any) {
         performSegue(withIdentifier: "RegisterSegue", sender: "nil")
     }

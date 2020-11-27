@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2054F4A92569410D00D4FEF2 /* MainHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHome.swift */; };
-		2054F4AE2569411E00D4FEF2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4AD2569411E00D4FEF2 /* Register.swift */; };
+		2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHomeController.swift */; };
+		2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4AD2569411E00D4FEF2 /* RegisterController.swift */; };
 		205C17A4256977B400433574 /* Pods_MyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; };
 		205C17A5256977B400433574 /* Pods_MyPets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		20D42B5825695319002B3137 /* Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D42B5725695319002B3137 /* Authentification.swift */; };
@@ -59,8 +59,8 @@
 
 /* Begin PBXFileReference section */
 		1881B33447A9AD50B6CF4061 /* Pods-MyPets-MyPetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets-MyPetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPets-MyPetsUITests/Pods-MyPets-MyPetsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2054F4A82569410D00D4FEF2 /* MainHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHome.swift; sourceTree = "<group>"; };
-		2054F4AD2569411E00D4FEF2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		2054F4A82569410D00D4FEF2 /* MainHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeController.swift; sourceTree = "<group>"; };
+		2054F4AD2569411E00D4FEF2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		20D42B5025694E91002B3137 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D42B5725695319002B3137 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
 		20D6F7A4256BD4D000C23F0C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +151,8 @@
 		20E58CA425680F5800376ABE /* MyPets */ = {
 			isa = PBXGroup;
 			children = (
-				2054F4AD2569411E00D4FEF2 /* Register.swift */,
-				2054F4A82569410D00D4FEF2 /* MainHome.swift */,
+				2054F4AD2569411E00D4FEF2 /* RegisterController.swift */,
+				2054F4A82569410D00D4FEF2 /* MainHomeController.swift */,
 				20E58CDC25683B8600376ABE /* HomeController.swift */,
 				20E58CA925680F5800376ABE /* ViewController.swift */,
 				20EA5C38256AA14000E66D14 /* Controller */,
@@ -462,9 +462,9 @@
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
-				2054F4AE2569411E00D4FEF2 /* Register.swift in Sources */,
+				2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */,
 				20E58CDD25683B8600376ABE /* HomeController.swift in Sources */,
-				2054F4A92569410D00D4FEF2 /* MainHome.swift in Sources */,
+				2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

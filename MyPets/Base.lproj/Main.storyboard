@@ -121,6 +121,9 @@
                                 <state key="normal" title="Join Us">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Register:" destination="yt2-LM-2gb" eventType="touchUpInside" id="lg9-Lj-3t5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-Nk-z2r">
                                 <rect key="frame" x="44" y="601" width="329" height="21"/>
@@ -173,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="3544.9275362318845" y="117.85714285714285"/>
         </scene>
-        <!--Register-->
+        <!--Registe Controllerr-->
         <scene sceneID="dxr-hK-P7I">
             <objects>
-                <viewController id="Rs4-9y-DRQ" customClass="Register" sceneMemberID="viewController">
+                <viewController id="Rs4-9y-DRQ" customClass="RegisteControllerr" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8N7-pk-2yx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,15 +332,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r3g-EP-Bfy"/>
+                    <connections>
+                        <outlet property="view" destination="8N7-pk-2yx" id="ZiH-CP-m7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL4-TQ-o2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4479.7101449275369" y="525"/>
         </scene>
-        <!--Main Home-->
+        <!--Main Home Controller-->
         <scene sceneID="lPh-lG-311">
             <objects>
-                <viewController id="D7A-cy-IVj" customClass="MainHome" sceneMemberID="viewController">
+                <viewController id="D7A-cy-IVj" customClass="MainHomeController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zk-4T-L6D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
