@@ -63,6 +63,7 @@
 		2054F4AD2569411E00D4FEF2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		20D42B5025694E91002B3137 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D42B5725695319002B3137 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
+		20D6F7A4256BD4D000C23F0C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E58CA225680F5800376ABE /* MyPets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E58CA525680F5800376ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20E58CA725680F5800376ABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,18 +151,19 @@
 		20E58CA425680F5800376ABE /* MyPets */ = {
 			isa = PBXGroup;
 			children = (
+				2054F4AD2569411E00D4FEF2 /* Register.swift */,
+				2054F4A82569410D00D4FEF2 /* MainHome.swift */,
+				20E58CDC25683B8600376ABE /* HomeController.swift */,
+				20E58CA925680F5800376ABE /* ViewController.swift */,
+				20EA5C38256AA14000E66D14 /* Controller */,
 				20D42B56256952F9002B3137 /* Service */,
 				20E58CA525680F5800376ABE /* AppDelegate.swift */,
 				20E58CA725680F5800376ABE /* SceneDelegate.swift */,
-				20E58CA925680F5800376ABE /* ViewController.swift */,
 				20E58CAB25680F5800376ABE /* Main.storyboard */,
 				20E58CB125680F5A00376ABE /* Assets.xcassets */,
 				20E58CB325680F5A00376ABE /* LaunchScreen.storyboard */,
 				20E58CB625680F5A00376ABE /* Info.plist */,
 				20E58CAE25680F5800376ABE /* MyPets.xcdatamodeld */,
-				20E58CDC25683B8600376ABE /* HomeController.swift */,
-				2054F4A82569410D00D4FEF2 /* MainHome.swift */,
-				2054F4AD2569411E00D4FEF2 /* Register.swift */,
 			);
 			path = MyPets;
 			sourceTree = "<group>";
@@ -184,6 +186,13 @@
 			path = MyPetsUITests;
 			sourceTree = "<group>";
 		};
+		20EA5C38256AA14000E66D14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		98B80A519DB26A9DDD48E09F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +209,7 @@
 		B8CBD01380EC08FEB07EB105 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20D6F7A4256BD4D000C23F0C /* Alamofire.framework */,
 				20D42B5025694E91002B3137 /* Alamofire.framework */,
 				EF22A2589849829EFE21B737 /* Pods_MyPets.framework */,
 				F840E7B9B2E1AF332B1E6591 /* Pods_MyPets_MyPetsUITests.framework */,
