@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2032E0492572B1C000684C78 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E0482572B1C000684C78 /* Service.swift */; };
+		2032E04B2572B40900684C78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E04A2572B40900684C78 /* User.swift */; };
+		2032E0622572EDF200684C78 /* DropDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E0612572EDF200684C78 /* DropDownController.swift */; };
+		2032E0642572F01C00684C78 /* DropDownTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E0632572F01C00684C78 /* DropDownTable.swift */; };
+		2032E066257307F000684C78 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E065257307F000684C78 /* Filter.swift */; };
+		2032E06825730DE700684C78 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E06725730DE700684C78 /* Specification.swift */; };
 		2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHomeController.swift */; };
 		2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4AD2569411E00D4FEF2 /* RegisterController.swift */; };
+		205945632572AE840071E3A1 /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945622572AE840071E3A1 /* Authenticate.swift */; };
+		205945652572AED80071E3A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945642572AED80071E3A1 /* Profile.swift */; };
 		205C17A4256977B400433574 /* Pods_MyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; };
 		205C17A5256977B400433574 /* Pods_MyPets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		20D42B5825695319002B3137 /* Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D42B5725695319002B3137 /* Authentification.swift */; };
@@ -59,8 +67,16 @@
 
 /* Begin PBXFileReference section */
 		1881B33447A9AD50B6CF4061 /* Pods-MyPets-MyPetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets-MyPetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPets-MyPetsUITests/Pods-MyPets-MyPetsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2032E0482572B1C000684C78 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2032E04A2572B40900684C78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2032E0612572EDF200684C78 /* DropDownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownController.swift; sourceTree = "<group>"; };
+		2032E0632572F01C00684C78 /* DropDownTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTable.swift; sourceTree = "<group>"; };
+		2032E065257307F000684C78 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		2032E06725730DE700684C78 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
 		2054F4A82569410D00D4FEF2 /* MainHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeController.swift; sourceTree = "<group>"; };
 		2054F4AD2569411E00D4FEF2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		205945622572AE840071E3A1 /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
+		205945642572AED80071E3A1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		20D42B5025694E91002B3137 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D42B5725695319002B3137 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
 		20D6F7A4256BD4D000C23F0C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2032E0602572EDCD00684C78 /* BtnDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				2032E0612572EDF200684C78 /* DropDownController.swift */,
+				2032E0632572F01C00684C78 /* DropDownTable.swift */,
+			);
+			path = BtnDropDown;
+			sourceTree = "<group>";
+		};
 		20D42B56256952F9002B3137 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,10 +176,7 @@
 		20E58CA425680F5800376ABE /* MyPets */ = {
 			isa = PBXGroup;
 			children = (
-				2054F4AD2569411E00D4FEF2 /* RegisterController.swift */,
-				2054F4A82569410D00D4FEF2 /* MainHomeController.swift */,
-				20E58CDC25683B8600376ABE /* HomeController.swift */,
-				20E58CA925680F5800376ABE /* ViewController.swift */,
+				2032E0602572EDCD00684C78 /* BtnDropDown */,
 				20EA5C38256AA14000E66D14 /* Controller */,
 				20D42B56256952F9002B3137 /* Service */,
 				20E58CA525680F5800376ABE /* AppDelegate.swift */,
@@ -189,6 +211,16 @@
 		20EA5C38256AA14000E66D14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				20E58CA925680F5800376ABE /* ViewController.swift */,
+				20E58CDC25683B8600376ABE /* HomeController.swift */,
+				2054F4A82569410D00D4FEF2 /* MainHomeController.swift */,
+				2054F4AD2569411E00D4FEF2 /* RegisterController.swift */,
+				205945622572AE840071E3A1 /* Authenticate.swift */,
+				205945642572AED80071E3A1 /* Profile.swift */,
+				2032E0482572B1C000684C78 /* Service.swift */,
+				2032E04A2572B40900684C78 /* User.swift */,
+				2032E065257307F000684C78 /* Filter.swift */,
+				2032E06725730DE700684C78 /* Specification.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,13 +490,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D42B5825695319002B3137 /* Authentification.swift in Sources */,
+				2032E066257307F000684C78 /* Filter.swift in Sources */,
+				205945652572AED80071E3A1 /* Profile.swift in Sources */,
 				20E58CAA25680F5800376ABE /* ViewController.swift in Sources */,
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
+				2032E0642572F01C00684C78 /* DropDownTable.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
 				2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */,
 				20E58CDD25683B8600376ABE /* HomeController.swift in Sources */,
+				2032E0622572EDF200684C78 /* DropDownController.swift in Sources */,
+				2032E04B2572B40900684C78 /* User.swift in Sources */,
+				2032E0492572B1C000684C78 /* Service.swift in Sources */,
 				2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */,
+				205945632572AE840071E3A1 /* Authenticate.swift in Sources */,
+				2032E06825730DE700684C78 /* Specification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
