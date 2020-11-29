@@ -7,7 +7,7 @@
 
 import UIKit
 
- class MainHomeController : UIViewController/*,UITableViewDataSource, UITableViewDelegate*/{
+ class MainHomeController : UIViewController,UITableViewDataSource, UITableViewDelegate{
     
     var animals = [""]
     
@@ -28,23 +28,28 @@ import UIKit
         
     }
     
-   /* func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animals.count
     }
     
+    func numberOfSections (in tableView: UITableView) -> Int {
+        return 1
+    }
+  
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Acell")
-        let contentView = cell?.contentView
+       /* let contentView = cell?.contentView
         let textView = contentView?.viewWithTag(1) as! UITextView
         let imageView = contentView?.viewWithTag(2) as! UIImageView
         
         textView.text = animals[indexPath.row]
         imageView.image = UIImage(named: animals[indexPath.row])
-        
+        */
         
         return cell!
     }
-    */
+    
     
  
     
