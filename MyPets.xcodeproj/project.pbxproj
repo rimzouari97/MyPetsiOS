@@ -15,7 +15,6 @@
 		2032E06825730DE700684C78 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E06725730DE700684C78 /* Specification.swift */; };
 		2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHomeController.swift */; };
 		2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4AD2569411E00D4FEF2 /* RegisterController.swift */; };
-		205945632572AE840071E3A1 /* Authenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945622572AE840071E3A1 /* Authenticate.swift */; };
 		205945652572AED80071E3A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945642572AED80071E3A1 /* Profile.swift */; };
 		205C17A4256977B400433574 /* Pods_MyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; };
 		205C17A5256977B400433574 /* Pods_MyPets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -75,7 +74,6 @@
 		2032E06725730DE700684C78 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
 		2054F4A82569410D00D4FEF2 /* MainHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeController.swift; sourceTree = "<group>"; };
 		2054F4AD2569411E00D4FEF2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		205945622572AE840071E3A1 /* Authenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticate.swift; sourceTree = "<group>"; };
 		205945642572AED80071E3A1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		20D42B5025694E91002B3137 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D42B5725695319002B3137 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 				20E58CDC25683B8600376ABE /* HomeController.swift */,
 				2054F4A82569410D00D4FEF2 /* MainHomeController.swift */,
 				2054F4AD2569411E00D4FEF2 /* RegisterController.swift */,
-				205945622572AE840071E3A1 /* Authenticate.swift */,
 				205945642572AED80071E3A1 /* Profile.swift */,
 				2032E0482572B1C000684C78 /* Service.swift */,
 				2032E04A2572B40900684C78 /* User.swift */,
@@ -503,7 +500,6 @@
 				2032E04B2572B40900684C78 /* User.swift in Sources */,
 				2032E0492572B1C000684C78 /* Service.swift in Sources */,
 				2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */,
-				205945632572AE840071E3A1 /* Authenticate.swift in Sources */,
 				2032E06825730DE700684C78 /* Specification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

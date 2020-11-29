@@ -8,15 +8,18 @@
 import UIKit
 class Authenticate: UIViewController {
     
+   let conn = Authentification()
+  
+  
     
-    @IBAction func email(_ sender: Any) {
-    }
+
     
-    @IBAction func password(_ sender: Any) {
-    }
+    
     
     
     @IBAction func login(_ sender: Any) {
+     var res = conn.authenticate(email: <#T##String#>, password: <#T##String#>)
+        
         performSegue(withIdentifier: "home", sender: "nil")
     }
     

@@ -16,9 +16,16 @@ class HomeController : UIViewController {
     
     @IBOutlet weak var Password: UITextField!
     
+    var conn = Authentification()
     
     @IBAction func Login(_ sender: Any) {
+        let res = conn.authenticate(email: Email.text! ,password: Password.text! )
+        if(res){
         performSegue(withIdentifier: "mainHomeSegue", sender: "nil")
+        }
+        else{
+            
+        }
     }
     
     
