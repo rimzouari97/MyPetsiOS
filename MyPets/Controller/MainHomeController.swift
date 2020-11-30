@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SideMenu
 
- class MainHomeController : UIViewController,UITableViewDataSource, UITableViewDelegate{
+ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //var menu : SideMenuNavigationController?
     
     var animals = [""]
     
@@ -22,6 +25,7 @@ import UIKit
     @IBAction func Menu(_ sender: Any) {
         
         performSegue(withIdentifier: "menu", sender: "nil")
+        //present(menu!, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,24 +50,14 @@ import UIKit
         textView.text = animals[indexPath.row]
         imageView.image = UIImage(named: animals[indexPath.row])
         */
-        
         return cell!
     }
-    
-    
  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-     
         
+        //menu = SideMenuNavigationController(rootViewController: UIViewController())
     }
-    
-    
-
-    
-
-    
-    
+   
 }

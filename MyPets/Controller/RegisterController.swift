@@ -7,9 +7,10 @@
 
 import UIKit
 
- class RegisteControllerr : UIViewController{
+ class RegisterController : UIViewController{
     
     @IBAction func signup(_ sender: Any) {
+        
         performSegue(withIdentifier: "signUp", sender: "nil")
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
