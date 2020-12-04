@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import SideMenu
+import Foundation
+
 
  class MainHomeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -55,6 +56,8 @@ import SideMenu
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        let name = UserDefaults.standard.string(forKey: "name")
+        print(name!)
         // Do any additional setup after loading the view.
         
         //menu = SideMenuNavigationController(rootViewController: UIViewController())

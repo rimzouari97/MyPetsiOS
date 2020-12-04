@@ -5,8 +5,10 @@ target 'MyPets' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
       pod 'Alamofire', '~> 5.2'
-      pod 'SideMenu' , '~> 6.0'
+      pod 'ObjectMapper'
+      pod 'PromiseKit'
       pod 'SwiftyJSON'
+      pod 'Toast-Swift', '~> 5.0.0'
       
 
   # Pods for MyPets

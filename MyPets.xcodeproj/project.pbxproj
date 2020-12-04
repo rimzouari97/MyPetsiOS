@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2032E0622572EDF200684C78 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E0612572EDF200684C78 /* SideMenuNavigationController.swift */; };
 		2032E066257307F000684C78 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E065257307F000684C78 /* Filter.swift */; };
 		2032E06825730DE700684C78 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E06725730DE700684C78 /* Specification.swift */; };
 		2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHomeController.swift */; };
@@ -15,6 +14,10 @@
 		205945652572AED80071E3A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945642572AED80071E3A1 /* Profile.swift */; };
 		205C17A4256977B400433574 /* Pods_MyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; };
 		205C17A5256977B400433574 /* Pods_MyPets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		20852EE2257A804E005ABD42 /* Vars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20852EE1257A804E005ABD42 /* Vars.swift */; };
+		20852EE4257A80A3005ABD42 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20852EE3257A80A3005ABD42 /* UserResponse.swift */; };
+		20852EE6257A80DA005ABD42 /* UserGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20852EE5257A80DA005ABD42 /* UserGlobal.swift */; };
+		20852F00257A83E5005ABD42 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20852EFF257A83E5005ABD42 /* APIManager.swift */; };
 		20D42B5825695319002B3137 /* Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D42B5725695319002B3137 /* Authentification.swift */; };
 		20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E58CA525680F5800376ABE /* AppDelegate.swift */; };
 		20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E58CA725680F5800376ABE /* SceneDelegate.swift */; };
@@ -63,12 +66,15 @@
 
 /* Begin PBXFileReference section */
 		1881B33447A9AD50B6CF4061 /* Pods-MyPets-MyPetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets-MyPetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPets-MyPetsUITests/Pods-MyPets-MyPetsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2032E0612572EDF200684C78 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		2032E065257307F000684C78 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		2032E06725730DE700684C78 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
 		2054F4A82569410D00D4FEF2 /* MainHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeController.swift; sourceTree = "<group>"; };
 		2054F4AD2569411E00D4FEF2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		205945642572AED80071E3A1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		20852EE1257A804E005ABD42 /* Vars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vars.swift; sourceTree = "<group>"; };
+		20852EE3257A80A3005ABD42 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		20852EE5257A80DA005ABD42 /* UserGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGlobal.swift; sourceTree = "<group>"; };
+		20852EFF257A83E5005ABD42 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		20D42B5025694E91002B3137 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D42B5725695319002B3137 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
 		20D6F7A4256BD4D000C23F0C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,12 +132,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2032E0602572EDCD00684C78 /* BtnDropDown */ = {
+		2032E0602572EDCD00684C78 /* DataResponse */ = {
 			isa = PBXGroup;
 			children = (
-				2032E0612572EDF200684C78 /* SideMenuNavigationController.swift */,
+				20852EE3257A80A3005ABD42 /* UserResponse.swift */,
+				20852EE5257A80DA005ABD42 /* UserGlobal.swift */,
 			);
-			path = BtnDropDown;
+			path = DataResponse;
 			sourceTree = "<group>";
 		};
 		20D42B56256952F9002B3137 /* Service */ = {
@@ -167,7 +174,7 @@
 		20E58CA425680F5800376ABE /* MyPets */ = {
 			isa = PBXGroup;
 			children = (
-				2032E0602572EDCD00684C78 /* BtnDropDown */,
+				2032E0602572EDCD00684C78 /* DataResponse */,
 				20EA5C38256AA14000E66D14 /* Controller */,
 				20D42B56256952F9002B3137 /* Service */,
 				20E58CA525680F5800376ABE /* AppDelegate.swift */,
@@ -177,6 +184,8 @@
 				20E58CB325680F5A00376ABE /* LaunchScreen.storyboard */,
 				20E58CB625680F5A00376ABE /* Info.plist */,
 				20E58CAE25680F5800376ABE /* MyPets.xcdatamodeld */,
+				20852EE1257A804E005ABD42 /* Vars.swift */,
+				20852EFF257A83E5005ABD42 /* APIManager.swift */,
 			);
 			path = MyPets;
 			sourceTree = "<group>";
@@ -478,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20D42B5825695319002B3137 /* Authentification.swift in Sources */,
+				20852EE4257A80A3005ABD42 /* UserResponse.swift in Sources */,
 				2032E066257307F000684C78 /* Filter.swift in Sources */,
 				205945652572AED80071E3A1 /* Profile.swift in Sources */,
 				20E58CAA25680F5800376ABE /* ViewController.swift in Sources */,
@@ -486,7 +496,9 @@
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
 				2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */,
 				20E58CDD25683B8600376ABE /* HomeController.swift in Sources */,
-				2032E0622572EDF200684C78 /* SideMenuNavigationController.swift in Sources */,
+				20852EE2257A804E005ABD42 /* Vars.swift in Sources */,
+				20852EE6257A80DA005ABD42 /* UserGlobal.swift in Sources */,
+				20852F00257A83E5005ABD42 /* APIManager.swift in Sources */,
 				2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */,
 				2032E06825730DE700684C78 /* Specification.swift in Sources */,
 			);

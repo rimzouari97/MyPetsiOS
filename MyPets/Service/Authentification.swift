@@ -7,50 +7,34 @@
 
 import UIKit
 import Alamofire
-
+import Foundation
 
 public class Authentification  {
-    let BaseUrl = "http://192.168.1.13:3000/users/"
+    let userDefaults = UserDefaults.standard
    
-    init() {
-        
-    }
-    
-    func  authenticate (email : String  , password:String) -> Bool {
-        var  res : Bool = true
+    func  authenticate (email : String  , password:String) {
        let  data : [String:Any] = ["email" : email, "password": password]
-        var sURL : String!
-        sURL = BaseUrl+"auth"
-        
+        userDefaults.object(forKey: "name")
+        userDefaults.object(forKey: "email")
+        userDefaults.object(forKey: "password")
+        userDefaults.object(forKey: "type")
         let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
-        
-        AF.request(sURL, method: .post, parameters: data, encoding: JSONEncoding.default).responseString(completionHandler: { response in
-                    //  print(response)
-            if(response.error == nil){
-                var responseString: String!
-                responseString = ""
-                if(response.data != nil){
-                    responseString = String(bytes: response.data!, encoding : .utf8)
-                    
+        AF.request(BASE_URL+"users/auth", method: .post, parameters: data, encoding: JSONEncoding.default)
+               .responseString { response in
+               switch (response.result){
+               case .success(let responseString):
+                   print(responseString)
+                   let userR = UserResponse(JSONString: "\(responseString)")
+                if((userR?.success!) != false){
+                let user = userR?.user
+                    self.userDefaults.setValue(user?.name, forKey: "name")
+                    print(userR?.success!)
+                    //HomeController.res = true
                 }
-                else{
-                    responseString = response.response?.description
-                }
-                print(responseString ?? "")
-                print(response.response?.statusCode)
-                var responseData : NSData!
-                responseData = response.data! as NSData
-              //  let iDataLength = responseData.length
-               // print("size :\(iDataLength) Bytes")
-               // print("Response Time\(response.metrics?.taskInterval.duration ?? 0) seconds")
-               
-            }else{
-                res = false
-            }
-                  })
-        return res as Bool
-      
-}
-  
+               case .failure(let error):
+                   print(error)
+               }
+           }
  
+}
 }
