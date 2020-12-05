@@ -55,19 +55,94 @@ class RegisterController : UIViewController {
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var Email: UITextField!
     
+    
     @IBOutlet weak var ConfirmPassword: UITextField!
     @IBOutlet weak var Password: UITextField!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+ 
+    }
+    
+    func validetion() -> Bool {
+        if(Name.text?.isEmpty == true){
+            self.view.makeToast("UserName is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+            return false
+        }else if (Email.text?.isEmpty == true){
+            self.view.makeToast("Email is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+            
+            return false
+        }else if (Password.text?.isEmpty == true){
+            self.view.makeToast("Password is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+            return false
+        }else if (ConfirmPassword.text?.isEmpty == true){
+            self.view.makeToast("Confirm Password is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+            return false
+        }else if (Password.text?.elementsEqual(ConfirmPassword.text!) == false){
+            self.view.makeToast("Password and Confirm password not Equals", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+            return false
+        }
+        return true
+    }
+    
     @IBAction func signup(_ sender: Any) {
-        let Type : String
+        var Type : String?
+        var b = true
+        
         if (volunteerBtn.isSelected == true){
-              Type = "volunteer"
+              Type! = "volunteer"
         } else if (shelterBtn.isSelected == true){
              Type = "shelter"
-        } else {  Type = "veterinarian"}
+        } else if (veterinarianBtn.isSelected == true)
+        {  Type! = "veterinarian"
+        }else {
+            b = false
+            self.view.makeToast("Category is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
+                if didTap {
+                    print("completion from tap")
+                } else {
+                    print("completion without tap")
+                }
+            }
+        }
         
-        
-        Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type)
+        if (self.validetion() == true && b == true) {
+        Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type!)
           if(self.res == true){
           performSegue(withIdentifier: "signUp", sender: "nil")
           }
@@ -82,19 +157,8 @@ class RegisterController : UIViewController {
               }
       }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+   
     }
-    
- 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-     
-        
-    }
-    
    
     func  Register (name: String, email : String  , password:String, type: String) {
         let  data : [String:Any] = ["name" : name ,"email" : email, "password": password, "type": type]
@@ -113,7 +177,7 @@ class RegisterController : UIViewController {
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     print(userR?.success!)
-                    //HomeController.res = true
+                    self.res = true
                 }
                case .failure(let error):
                    print(error)

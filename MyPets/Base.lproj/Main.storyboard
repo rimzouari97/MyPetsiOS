@@ -198,7 +198,7 @@
                         <outlet property="Email" destination="lIs-Qq-ZCa" id="LFo-hx-TUj"/>
                         <outlet property="Password" destination="DzJ-Lj-fOQ" id="jOf-e7-cDu"/>
                         <segue destination="bID-a1-3TA" kind="presentation" identifier="mainHomeSegue" modalPresentationStyle="fullScreen" id="ppW-zz-6k5"/>
-                        <segue destination="Rs4-9y-DRQ" kind="presentation" identifier="RegisterSegue" id="Vr3-nh-ZE8"/>
+                        <segue destination="Rs4-9y-DRQ" kind="presentation" identifier="RegisterSegue" modalPresentationStyle="automatic" id="Vr3-nh-ZE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ya1-tq-W7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,7 +210,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Rs4-9y-DRQ" customClass="RegisterController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8N7-pk-2yx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fLZ-kw-9ri">
@@ -418,6 +418,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="r3g-EP-Bfy"/>
                     <connections>
+                        <outlet property="ConfirmPassword" destination="1To-lx-veA" id="zmk-eh-7YZ"/>
                         <outlet property="Email" destination="vgg-x4-oyh" id="KTF-9S-dM8"/>
                         <outlet property="Name" destination="e8R-u8-4vZ" id="ATV-nC-Qwe"/>
                         <outlet property="Password" destination="raj-F0-ddL" id="xtI-mQ-GLF"/>
