@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import Foundation
 class RegisterController : UIViewController {
 
     let userDefaults = UserDefaults.standard
@@ -60,10 +61,10 @@ class RegisterController : UIViewController {
     @IBAction func signup(_ sender: Any) {
         let Type : String
         if (volunteerBtn.isSelected == true){
-            let  Type = "volunteer"
+              Type = "volunteer"
         } else if (shelterBtn.isSelected == true){
-            let Type = "shelter"
-        } else { let Type = "veterinarian"}
+             Type = "shelter"
+        } else {  Type = "veterinarian"}
         
         performSegue(withIdentifier: "signUp", sender: "nil")
         Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type)
@@ -92,7 +93,7 @@ class RegisterController : UIViewController {
      
         
     }
-    let userDefaults = UserDefaults.standard
+    
    
     func  Register (name: String, email : String  , password:String, type: String) {
         let  data : [String:Any] = ["name" : name ,"email" : email, "password": password, "type": type]
