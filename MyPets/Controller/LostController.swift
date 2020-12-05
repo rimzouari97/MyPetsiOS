@@ -9,13 +9,23 @@ import UIKit
 
 class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-    
+    var Data : [String] = ["poki","poki"]
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return Data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier:"mCellLost")
+        let contentView = cell?.contentView
+        let label = contentView?.viewWithTag(2) as! UITextView
+        let imageView = contentView?.viewWithTag(1) as! UIImageView
+        
+        label.text = Data[indexPath.row]
+        
+        imageView.image = UIImage(named: Data[ indexPath.row])
+        
+    return cell!
     }
     
     override func viewDidLoad() {
