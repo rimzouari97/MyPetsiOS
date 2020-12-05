@@ -142,20 +142,9 @@ class RegisterController : UIViewController {
         }
         
         if (self.validetion() == true && b == true) {
-        Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type!)
-          if(self.res == true){
+        Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type!)	
           performSegue(withIdentifier: "signUp", sender: "nil")
-          }
-          
-          else{
-              self.view.makeToast("Invalid", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
-                  if didTap {
-                      print("completion from tap")
-                  } else {
-                      print("completion without tap")
-                  }
-              }
-      }
+     
     }
    
     }
