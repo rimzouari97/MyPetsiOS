@@ -29,6 +29,7 @@
 		20E58CC025680F5A00376ABE /* MyPetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E58CBF25680F5A00376ABE /* MyPetsTests.swift */; };
 		20E58CCB25680F5A00376ABE /* MyPetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E58CCA25680F5A00376ABE /* MyPetsUITests.swift */; };
 		20E58CDD25683B8600376ABE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E58CDC25683B8600376ABE /* HomeController.swift */; };
+		29DC1DE2257B07AD00C44B85 /* LostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DC1DE1257B07AD00C44B85 /* LostController.swift */; };
 		E33064171B2825F8603B354B /* Pods_MyPetsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87143A8A98D4BC3A70D4782 /* Pods_MyPetsTests.framework */; };
 		E4C5006BCD44220CAFBCA8B2 /* Pods_MyPets_MyPetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F840E7B9B2E1AF332B1E6591 /* Pods_MyPets_MyPetsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		20E58CCA25680F5A00376ABE /* MyPetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsUITests.swift; sourceTree = "<group>"; };
 		20E58CCC25680F5A00376ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20E58CDC25683B8600376ABE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		29DC1DE1257B07AD00C44B85 /* LostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostController.swift; sourceTree = "<group>"; };
 		33D3C7315FBE40A50C7381DC /* Pods-MyPets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets.debug.xcconfig"; path = "Target Support Files/Pods-MyPets/Pods-MyPets.debug.xcconfig"; sourceTree = "<group>"; };
 		45C881C984FD8F09747D5412 /* Pods-MyPets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets.release.xcconfig"; path = "Target Support Files/Pods-MyPets/Pods-MyPets.release.xcconfig"; sourceTree = "<group>"; };
 		6436DEECEFE0BC5495D94CEB /* Pods-MyPetsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPetsTests.release.xcconfig"; path = "Target Support Files/Pods-MyPetsTests/Pods-MyPetsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				205945642572AED80071E3A1 /* Profile.swift */,
 				2032E065257307F000684C78 /* Filter.swift */,
 				2032E06725730DE700684C78 /* Specification.swift */,
+				29DC1DE1257B07AD00C44B85 /* LostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				2032E066257307F000684C78 /* Filter.swift in Sources */,
 				205945652572AED80071E3A1 /* Profile.swift in Sources */,
 				20E58CAA25680F5800376ABE /* ViewController.swift in Sources */,
+				29DC1DE2257B07AD00C44B85 /* LostController.swift in Sources */,
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
