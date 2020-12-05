@@ -418,7 +418,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="r3g-EP-Bfy"/>
                     <connections>
-                        <outlet property="ConfirmPassword" destination="1To-lx-veA" id="ZPC-90-ai4"/>
                         <outlet property="Email" destination="vgg-x4-oyh" id="KTF-9S-dM8"/>
                         <outlet property="Name" destination="e8R-u8-4vZ" id="ATV-nC-Qwe"/>
                         <outlet property="Password" destination="raj-F0-ddL" id="xtI-mQ-GLF"/>

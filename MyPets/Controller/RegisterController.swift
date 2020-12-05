@@ -66,7 +66,7 @@ class RegisterController : UIViewController {
              Type = "shelter"
         } else {  Type = "veterinarian"}
         
-        performSegue(withIdentifier: "signUp", sender: "nil")
+        
         Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type)
           if(self.res == true){
           performSegue(withIdentifier: "signUp", sender: "nil")
