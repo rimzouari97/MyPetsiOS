@@ -56,6 +56,7 @@ class RegisterController : UIViewController {
     @IBOutlet weak var Email: UITextField!
     
     
+  
     @IBOutlet weak var ConfirmPassword: UITextField!
     @IBOutlet weak var Password: UITextField!
     
@@ -143,7 +144,7 @@ class RegisterController : UIViewController {
         
         if (self.validetion() == true && b == true) {
         Register(name: Name.text!, email: Email.text!, password: Password.text!, type: Type!)	
-          performSegue(withIdentifier: "signUp", sender: "nil")
+          
      
     }
    
@@ -166,7 +167,7 @@ class RegisterController : UIViewController {
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     print(userR?.success!)
-                    self.res = true
+                    self.performSegue(withIdentifier: "signUp", sender: "nil")
                 }
                case .failure(let error):
                    print(error)
