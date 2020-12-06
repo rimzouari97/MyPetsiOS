@@ -72,6 +72,8 @@ class HomeController : UIViewController {
                 if((userR?.success!) != false){
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
+                    self.userDefaults.setValue(user?.email, forKey: "email")
+                    self.userDefaults.setValue(user?.type, forKey: "type")
                     print(userR?.success!)
                     self.res = true
                 }

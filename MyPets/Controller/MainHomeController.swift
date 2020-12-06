@@ -57,7 +57,7 @@ import Foundation
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = UserDefaults.standard.string(forKey: "name")
-        print(name!)
+        print("this user Defaults : "+name!)
         // Do any additional setup after loading the view.
         
         //menu = SideMenuNavigationController(rootViewController: UIViewController())
