@@ -62,7 +62,7 @@ class HomeController : UIViewController {
         userDefaults.object(forKey: "email")
         userDefaults.object(forKey: "password")
         userDefaults.object(forKey: "type")
-        let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
+        //let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(BASE_URL+"users/auth", method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
                switch (response.result){
@@ -74,7 +74,7 @@ class HomeController : UIViewController {
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     self.userDefaults.setValue(user?.email, forKey: "email")
                     self.userDefaults.setValue(user?.type, forKey: "type")
-                    print(userR?.success!)
+                  //  print(userR?.success!)
                     self.res = true
                 }
                case .failure(let error):
