@@ -24,9 +24,8 @@ class Profile: UIViewController{
     
     
     @IBAction func MyProfileBtn(_ sender: Any) {
+        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
         
-        
-        performSegue(withIdentifier: "myProfile", sender: "nil")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,7 @@ class Profile: UIViewController{
         }
         print(url)
         
-        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
+        
         
     }
     
@@ -63,7 +62,7 @@ class Profile: UIViewController{
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     print(userR?.success!)
-                    self.performSegue(withIdentifier: "signUp", sender: "nil")
+                    self.performSegue(withIdentifier: "myProfile", sender: "nil")
                 }
                case .failure(let error):
                    print(error)

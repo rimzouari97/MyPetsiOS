@@ -9,10 +9,11 @@ import UIKit
 
 class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-    var Data : [String] = ["poki","poki"]
+   // var Data : [String] = ["poki","poki"]
+    static var Data : [LostAndFound] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Data.count
+        return LostController.Data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,9 +22,11 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
         let label = contentView?.viewWithTag(2) as! UITextView
         let imageView = contentView?.viewWithTag(1) as! UIImageView
         
-        label.text = Data[indexPath.row]
+        label.text = LostController.Data[indexPath.row].Desc
         
-        imageView.image = UIImage(named: Data[ indexPath.row])
+        imageView.image = UIImage(named: "poki")
+        
+      //  imageView.image = UIImage(named: Data[ indexPath.row])
         
     return cell!
     }
