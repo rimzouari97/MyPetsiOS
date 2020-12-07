@@ -24,9 +24,9 @@ class Profile: UIViewController{
     
     
     @IBAction func MyProfileBtn(_ sender: Any) {
+
         
-        
-        performSegue(withIdentifier: "myProfile", sender: "nil")
+        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +43,10 @@ class Profile: UIViewController{
         }
         print(url)
         
-        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
+        
         
     }
-    
+
     func  CreateProfile (Adresse: String?, telephon : String?  , image:String?) {
         let  data : [String:Any] = ["IdUser": UserDefaults.standard.string(forKey: "id"),"Adresse" : Adresse! ,"telephon" : telephon!, "image": image!]
         userDefaults.object(forKey: "adresse")
@@ -55,7 +55,7 @@ class Profile: UIViewController{
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
-               switch (response.result){
+                switch (response.result){
                case .success(let responseString):
                    print(responseString)
                    let userR = UserResponse(JSONString: "\(responseString)")
@@ -63,7 +63,7 @@ class Profile: UIViewController{
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     print(userR?.success!)
-                    self.performSegue(withIdentifier: "signUp", sender: "nil")
+                    self.performSegue(withIdentifier: "myProfile", sender: "nil")
                 }
                case .failure(let error):
                    print(error)

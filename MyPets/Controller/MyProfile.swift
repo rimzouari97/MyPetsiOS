@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class MyProfile: UIViewController{
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

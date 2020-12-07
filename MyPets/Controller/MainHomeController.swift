@@ -15,6 +15,9 @@ import Foundation
     
     var animals = [""]
     
+
+    
+    
     @IBOutlet weak var bar: UINavigationBar!
     
     @IBOutlet weak var hometable: UITableView!
@@ -53,14 +56,18 @@ import Foundation
         */
         return cell!
     }
- 
+
+  
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = UserDefaults.standard.string(forKey: "name")
-        print("this user Defaults : "+name!)
+        print("this user Defaults : " + name!)
         // Do any additional setup after loading the view.
+      
         
-        //menu = SideMenuNavigationController(rootViewController: UIViewController())
     }
    
 }
