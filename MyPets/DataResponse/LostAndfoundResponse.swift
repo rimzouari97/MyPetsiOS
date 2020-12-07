@@ -29,6 +29,7 @@ class LostAndFound :Mappable{
     var  id :String?
     var  IdUser:String?
     var  `Type`:String?
+    var  ImageAnimal:String?
     var  Desc: String?
     var  Date:String?
     var  valide:String?
@@ -40,6 +41,7 @@ class LostAndFound :Mappable{
         IdUser <- map["IdUser"]
         id <- map["_id"]
         Type <- map["Type"]
+        ImageAnimal <- map["ImageAnimal"]
         Desc <- map["Desc"]
         Date <- map["Date"]
         valide <- map["valide"]

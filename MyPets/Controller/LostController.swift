@@ -9,7 +9,12 @@ import UIKit
 
 class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate{
     
-   // var Data : [String] = ["poki","poki"]
+    
+    
+    @IBAction func AddLostAnimal(_ sender: Any) {
+        performSegue(withIdentifier: "addLostAnimal", sender: "nil")
+    }
+    // var Data : [String] = ["poki","poki"]
     static var Data : [LostAndFound] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +39,7 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //print(LostController.Data.count)
     }
     
     
