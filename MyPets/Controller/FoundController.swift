@@ -9,6 +9,10 @@ import UIKit
 import Alamofire
 class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBAction func AddFoundAnimal(_ sender: Any) {
+        performSegue(withIdentifier: "addFoundAnimal", sender: "nil")
+    }
+    
     
    static var Data : [LostAndFound] = []
     var Data1 : [String] = ["poki"]
