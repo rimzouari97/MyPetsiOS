@@ -6,4 +6,4 @@
 //
 
 import Foundation
-let BASE_URL = "http://192.168.1.12:3000/"
+let BASE_URL = "http://192.168.1.6:3000/"

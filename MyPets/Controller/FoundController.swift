@@ -27,6 +27,7 @@ class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSour
         
       //  label.text = Data1[indexPath.row]
         label.text = FoundController.Data[indexPath.row].Desc
+        print(FoundController.Data[indexPath.row].Desc)
         imageView.image = UIImage(named:"poki")
        // imageView.image = UIImage(named: Data[indexPath.row].)
         
