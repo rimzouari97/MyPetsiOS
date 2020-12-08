@@ -7,76 +7,71 @@
 
 import Foundation
 import UIKit
+import SideMenu
 
-class MenuController: UIViewController {
+class MenuController: UITableViewController{
     
+   private var menuItems : [String] = ["Home","Profile","Lost","Found","Logout"]
+    private let color = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+ 
+    init() {
+        super.init(nibName: nil, bundle: nil)
     
-    
-    
-    lazy var menuBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "sidebar.leading")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(menuBarButtonItemTapped))
-    
-    var isSlideInMenuPresented = false
-    
-    @objc
-    func menuBarButtonItemTapped( ){
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut){
-            self.containerView.frame.origin.x = self.isSlideInMenuPresented ? 0 : self.containerView.frame.width - self.slideInMenuPadding
-        }  completion: { ( finished) in print ("Animation finished: \( finished)")
-            self.isSlideInMenuPresented.toggle()
-        }
+       
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
-    
-    lazy var menuView : UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemGray5
-        return view
-    }()
-    
-    lazy var containerView : UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemBackground
-        return view
-    }()
-    
-    lazy var slideInMenuPadding : CGFloat = self.view.frame.width * 0.30
    
-    
-    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        title = "Side Menu"
-        navigationItem.setLeftBarButton(menuBarButtonItem, animated: false)
-        
-        menuView.pinMenuTo(view, with: slideInMenuPadding)
-        containerView.edgeTo(view)
-        
+        tableView.backgroundColor = color
+        view.backgroundColor = color
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"cell",for: indexPath)
+        cell.textLabel?.text = menuItems[indexPath.row]
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = color
+        cell.contentView.backgroundColor = color
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      //  tableView.deselectRow(at: indexPath, animated: true)
+       // performSegue(withIdentifier: "mSeg", sender: indexPath)
+      //  let  selectedItem  = menuItems[indexPath.row]
+       // print(indexPath.row)
+        if(indexPath.row == 0){
+            print(indexPath.row)
+            print(indexPath.row)
+            let secondVC = storyboard?.instantiateViewController(identifier: "HomeController") as! HomeController
+            self.present(secondVC, animated:true, completion:nil)
+        }else  if(indexPath.row == 1){
+           
+        }else if(indexPath.row == 2){
+            print(indexPath.row)
+            print(indexPath.row)
+            let secondVC = storyboard?.instantiateViewController(identifier: "MyProfile") as! MyProfile
+            self.present(secondVC, animated:true, completion:nil)
+        }else if(indexPath.row == 3){
+            print(indexPath.row)
+            print(indexPath.row)
+            let secondVC = storyboard?.instantiateViewController(identifier: "MyProfile") as! MyProfile
+            self.present(secondVC, animated:true, completion:nil)
+        }else if(indexPath.row == 4){
+            print(indexPath.row)
+        }
         
     }
-
     
     
     
     
-    
-    
-}
-public extension UIView{
-    func edgeTo(_ view: UIView){
-        view.addSubview(self)
-        translatesAutoresizingMaskIntoConstraints = false
-        topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
-    func pinMenuTo(_ view: UIView, with constant: CGFloat){
-        view.addSubview(self)
-        translatesAutoresizingMaskIntoConstraints = false
-        topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
-
 }

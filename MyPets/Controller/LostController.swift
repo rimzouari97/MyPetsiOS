@@ -12,8 +12,12 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
     
     
     @IBAction func AddLostAnimal(_ sender: Any) {
+        AddLostAndFound.type = "Lost"
         performSegue(withIdentifier: "addLostAnimal", sender: "nil")
     }
+    
+
+    
     // var Data : [String] = ["poki","poki"]
     static var Data : [LostAndFound] = []
 
@@ -38,6 +42,8 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         // Do any additional setup after loading the view.
         //print(LostController.Data.count)
     }

@@ -6,13 +6,17 @@
 //
 
 import UIKit
-import Foundation
+import SideMenu
+import EventKitUI
 
 
- class MainHomeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainHomeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
     
+   
     //var menu : SideMenuNavigationController?
     
+  
     var animals = [""]
     
 
@@ -26,11 +30,7 @@ import Foundation
         performSegue(withIdentifier: "FilterSegue", sender: "nil")
     }
   
-    @IBAction func Menu(_ sender: Any) {
-        
-        performSegue(withIdentifier: "menu", sender: "nil")
-        //present(menu!, animated: true)
-    }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -57,17 +57,30 @@ import Foundation
         return cell!
     }
 
-  
+    private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
+    
    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        sideMenu.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+        
+        
+        
+        
         let name = UserDefaults.standard.string(forKey: "name")
         print("this user Defaults : " + name!)
         // Do any additional setup after loading the view.
       
         
     }
+    
+    @IBAction func Menu(_ sender: Any) {
+        
+        present(sideMenu, animated: true)
+    
+    }
+  
    
 }

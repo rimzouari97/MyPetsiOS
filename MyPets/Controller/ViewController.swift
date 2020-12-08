@@ -28,12 +28,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        ListFound()
-        ListLost()
+        ViewController.ListFound()
+        ViewController.ListLost()
         
     }
     
-    func  ListFound () {
+    static func  ListFound () {
         
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(BASE_URL+"lostAndFound/getFound", method: .post,  encoding: JSONEncoding.default)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
   
     
 }
-    func  ListLost () {
+    static func  ListLost () {
         
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(BASE_URL+"lostAndFound/getLost", method: .post,  encoding: JSONEncoding.default)

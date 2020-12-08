@@ -52,6 +52,8 @@ class HomeController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
        // authenticate(user: "kk", password: "ddd")
     }
@@ -71,6 +73,7 @@ class HomeController : UIViewController {
                    let userR = UserResponse(JSONString: "\(responseString)")
                 if((userR?.success!) != false){
                 let user = userR?.user
+                    self.userDefaults.setValue(user?.id, forKey: "id")
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     self.userDefaults.setValue(user?.email, forKey: "email")
                     self.userDefaults.setValue(user?.type, forKey: "type")

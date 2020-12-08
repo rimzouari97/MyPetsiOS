@@ -9,16 +9,18 @@ import UIKit
 import Alamofire
 class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    private var tb: UITableView?
+    
     @IBAction func AddFoundAnimal(_ sender: Any) {
+        AddLostAndFound.type = "Found"
         performSegue(withIdentifier: "addFoundAnimal", sender: "nil")
     }
-    
+   
     
    static var Data : [LostAndFound] = []
     var Data1 : [String] = ["poki"]
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       //  return FoundController.Data.count
-        
             return FoundController.Data.count
        
     }
@@ -37,6 +39,11 @@ class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSour
         
     return cell!
     }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            tb?.reloadData()   // ...and it is also visible here.
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

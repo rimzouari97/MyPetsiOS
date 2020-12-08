@@ -9,6 +9,7 @@ target 'MyPets' do
       pod 'PromiseKit'
       pod 'SwiftyJSON'
       pod 'Toast-Swift', '~> 5.0.0'
+      pod 'SideMenu'
       
 
   # Pods for MyPets

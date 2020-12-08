@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SideMenu
 
 class Profile: UIViewController{
     let userDefaults = UserDefaults.standard
@@ -28,8 +29,11 @@ class Profile: UIViewController{
         
         CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
         // Do any additional setup after loading the view.
         let type = UserDefaults.standard.string(forKey: "type")
         print(type!)
@@ -48,7 +52,9 @@ class Profile: UIViewController{
     }
 
     func  CreateProfile (Adresse: String?, telephon : String?  , image:String?) {
-        let  data : [String:Any] = ["IdUser": UserDefaults.standard.string(forKey: "id"),"Adresse" : Adresse! ,"telephon" : telephon!, "image": image!]
+        
+        let id = UserDefaults.standard.string(forKey: "id")
+        let  data : [String:Any] = ["IdUser": id,"Adresse" : Adresse! ,"telephon" : telephon!, "image": image!]
         userDefaults.object(forKey: "adresse")
         userDefaults.object(forKey: "telephon")
         userDefaults.object(forKey: "image")
