@@ -11,7 +11,7 @@ import SideMenu
 
 class Profile: UIViewController{
     let userDefaults = UserDefaults.standard
-    var url = BASE_URL
+    var url :String?
     
     @IBOutlet weak var Address: UITextField!
     
@@ -38,16 +38,16 @@ class Profile: UIViewController{
         let type = UserDefaults.standard.string(forKey: "type")
         print(type!)
         
-        if(type?.elementsEqual("shelter") == true){
-            url.append("abri/add")
-        }else if(type?.elementsEqual("veterinarian") == true){
-            url.append(BASE_URL+"veterinaire/add")
-        }else if(type?.elementsEqual("volunteer") == true){
-            url.append(BASE_URL+"/volontaire/add")
+        if(type?.elementsEqual("Abris") == true){
+            url = BASE_URL+"abri"
+            print(url!)
+        }else if(type?.elementsEqual("Veterinaires") == true){
+            url = BASE_URL+"veterinaire"
+            print(url!)
+        }else if(type?.elementsEqual("Volontaires") == true){
+            url = BASE_URL+"volontaire"
+            print(url!)
         }
-        print(url)
-        
-        
         
     }
 
@@ -55,20 +55,23 @@ class Profile: UIViewController{
         
         let id = UserDefaults.standard.string(forKey: "id")
         let  data : [String:Any] = ["IdUser": id,"Adresse" : Adresse! ,"telephon" : telephon!, "image": image!]
-        userDefaults.object(forKey: "adresse")
-        userDefaults.object(forKey: "telephon")
+        userDefaults.object(forKey: "Adresse")
+        userDefaults.object(forKey: "phone")
         userDefaults.object(forKey: "image")
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
-        AF.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
+        AF.request(url!+"/add", method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
                 switch (response.result){
                case .success(let responseString):
                    print(responseString)
-                   let userR = UserResponse(JSONString: "\(responseString)")
-                if((userR?.success!) != false){
-                let user = userR?.user
-                    self.userDefaults.setValue(user?.name, forKey: "name")
-                    print(userR?.success!)
+                   let profil = profileResponse(JSONString: "\(responseString)")
+                if((profil?.success!) != false){
+                let p = profil?.profile
+                    self.userDefaults.setValue(p?.Adresse, forKey: "Adresse")
+                    self.userDefaults.setValue(p?.telephone, forKey: "phone")
+                    self.userDefaults.setValue(p?.image,forKey: "image")
+                    print(profil?.success!)
+                    
                     self.performSegue(withIdentifier: "myProfile", sender: "nil")
                 }
                case .failure(let error):

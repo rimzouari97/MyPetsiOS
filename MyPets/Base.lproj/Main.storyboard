@@ -199,6 +199,7 @@
                         <outlet property="Password" destination="DzJ-Lj-fOQ" id="jOf-e7-cDu"/>
                         <segue destination="bID-a1-3TA" kind="presentation" identifier="mainHomeSegue" modalPresentationStyle="fullScreen" id="ppW-zz-6k5"/>
                         <segue destination="Rs4-9y-DRQ" kind="showDetail" identifier="RegisterSegue" id="2AL-xn-0WX"/>
+                        <segue destination="3pb-fY-SIA" kind="presentation" identifier="mSegueProfile" id="XrM-As-ZEz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ya1-tq-W7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL4-TQ-o2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4369.5652173913049" y="535.71428571428567"/>
+            <point key="canvasLocation" x="4342" y="656"/>
         </scene>
         <!--Profile-->
         <scene sceneID="xO3-zC-uGt">
@@ -1240,6 +1241,7 @@ Address</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="KCp-l0-LnN"/>
+        <segue reference="XrM-As-ZEz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83982351040000003" green="0.83982351040000003" blue="0.83982351040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

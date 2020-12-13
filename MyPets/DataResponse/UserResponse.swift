@@ -40,7 +40,7 @@ class User :Mappable{
         name <- map["name"]
         email <- map["email"]
         type <- map["type"]
-        id <- map["id"]
+        id <- map["_id"]
     }
     
     

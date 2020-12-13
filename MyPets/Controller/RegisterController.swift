@@ -127,13 +127,13 @@ class RegisterController : UIViewController {
         
         if (volunteerBtn.isSelected == true){
             print("vol")
-              Type = "volunteer"
+              Type = "Volontaires"
         } else if (shelterBtn.isSelected == true){
             print("shelter")
-             Type = "shelter"
+             Type = "Abris"
         } else if (veterinarianBtn.isSelected == true){
             print("veto")
-            Type = "veterinarian"
+            Type = "Veterinaires"
         }else {
             b = false
             self.view.makeToast("Category is required", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
