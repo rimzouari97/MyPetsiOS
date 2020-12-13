@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -545,27 +545,11 @@
         <!--My Profile-->
         <scene sceneID="5ef-Uq-YmH">
             <objects>
-                <viewController storyboardIdentifier="MyProfile" id="D34-Rc-aPY" customClass="MyProfile" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyProfile" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D34-Rc-aPY" customClass="MyProfile" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0p-2Z-LS3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZw-aQ-Lf4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="My Profile" id="JVo-av-XfF">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="u5k-Hx-h1o">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e2G-wL-C7a">
-                                                <rect key="frame" x="20" y="11" width="19" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.90938490630000002" green="0.73200613260000003" blue="0.4440234005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="lineweight" catalog="system"/>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i3T-me-CLj">
                                 <rect key="frame" x="0.0" y="283" width="414" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,14 +586,39 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZw-aQ-Lf4">
+                                <rect key="frame" x="0.0" y="31" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="My Profile" id="JVo-av-XfF">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="nMj-ET-RWM">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="csS-U6-egE">
+                                                <rect key="frame" x="20" y="11" width="75" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.90938490629196167" green="0.73200613260269165" blue="0.44402340054512024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="line.horizontal.3" catalog="system"/>
+                                                <connections>
+                                                    <action selector="menu:" destination="D34-Rc-aPY" eventType="touchUpInside" id="8Vv-QA-Q91"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="menu:" destination="D34-Rc-aPY" id="YzZ-oU-BkA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hid-nc-xJZ"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="bar" destination="sZw-aQ-Lf4" id="Ro0-rT-XOu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBw-dr-dNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5220" y="1227"/>
+            <point key="canvasLocation" x="5200" y="1226"/>
         </scene>
         <!--Add Lost And Found-->
         <scene sceneID="7cE-EI-zVa">
@@ -689,7 +698,7 @@
         <!--Lost-->
         <scene sceneID="hT9-IR-LiS">
             <objects>
-                <viewController id="uNj-ve-ewz" customClass="LostController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LostController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNj-ve-ewz" customClass="LostController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ihh-G0-uKo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -705,7 +714,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.90938490630000002" green="0.73200613260000003" blue="0.4440234005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="lineweight" catalog="system"/>
+                                                <connections>
+                                                    <action selector="menu:" destination="uNj-ve-ewz" eventType="touchUpInside" id="fxx-vr-F0K"/>
+                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="menu:" destination="uNj-ve-ewz" id="srw-Pa-YIq"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -781,7 +796,7 @@
         <!--Main Home Controller-->
         <scene sceneID="lPh-lG-311">
             <objects>
-                <viewController id="D7A-cy-IVj" customClass="MainHomeController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainHomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D7A-cy-IVj" customClass="MainHomeController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zk-4T-L6D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1129,7 +1144,7 @@ Address</string>
         <!--Found Controller-->
         <scene sceneID="yhA-9w-7Kb">
             <objects>
-                <viewController id="aa9-PX-xTa" customClass="FoundController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoundController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aa9-PX-xTa" customClass="FoundController" customModule="MyPets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IR-Ep-g0F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1145,7 +1160,13 @@ Address</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.90938490629196167" green="0.73200613260269165" blue="0.44402340054512024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="lineweight" catalog="system"/>
+                                                <connections>
+                                                    <action selector="menu:" destination="aa9-PX-xTa" eventType="touchUpInside" id="X1m-uT-62U"/>
+                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="menu:" destination="aa9-PX-xTa" id="BqJ-Ji-Tnp"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1240,7 +1261,7 @@ Address</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KCp-l0-LnN"/>
+        <segue reference="rIl-P4-pU8"/>
         <segue reference="XrM-As-ZEz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83982351040000003" green="0.83982351040000003" blue="0.83982351040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

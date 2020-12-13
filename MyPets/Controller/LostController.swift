@@ -6,9 +6,13 @@
 //
 
 import UIKit
-
+import SideMenu
 class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate{
     
+    
+    @IBAction func menu(_ sender: Any) {
+        present(sideMenu, animated: true)
+    }
     
     
     @IBAction func AddLostAnimal(_ sender: Any) {
@@ -39,10 +43,12 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
         
     return cell!
     }
-    
+    private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sideMenu.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
     
         // Do any additional setup after loading the view.
         //print(LostController.Data.count)

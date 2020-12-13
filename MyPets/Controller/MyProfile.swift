@@ -10,8 +10,18 @@ import UIKit
 import SideMenu
 
 class MyProfile: UIViewController{
+    
+    
+    @IBOutlet weak var bar: UINavigationBar!
+    
     private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
-   
+ 
+  
+    @IBAction func menu(_ sender: Any) {
+        present(sideMenu, animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu.leftSide = true

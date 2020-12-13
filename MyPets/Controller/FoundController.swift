@@ -7,7 +7,13 @@
 
 import UIKit
 import Alamofire
+import SideMenu
 class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+ 
+    @IBAction func menu(_ sender: Any) {
+        present(sideMenu, animated: true)
+    }
     
     private var tb: UITableView?
     
@@ -44,10 +50,12 @@ class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSour
             
             tb?.reloadData()   // ...and it is also visible here.
         }
-    
+    private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sideMenu.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
         print(FoundController.Data.count)
         
     }

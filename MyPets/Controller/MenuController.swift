@@ -50,23 +50,28 @@ class MenuController: UITableViewController{
        // print(indexPath.row)
         if(indexPath.row == 0){
             print(indexPath.row)
-            print(indexPath.row)
-            let secondVC = storyboard?.instantiateViewController(identifier: "HomeController") as! HomeController
-            self.present(secondVC, animated:true, completion:nil)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainhome = storyBoard.instantiateViewController(withIdentifier: "MainHomeController") as! MainHomeController
+            self.present(mainhome, animated:true, completion:nil)
         }else  if(indexPath.row == 1){
-           
+            print(indexPath.row)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myprofile = storyBoard.instantiateViewController(withIdentifier: "MyProfile") as! MyProfile
+            self.present(myprofile, animated: true, completion: nil)
         }else if(indexPath.row == 2){
             print(indexPath.row)
-            print(indexPath.row)
-            let secondVC = storyboard?.instantiateViewController(identifier: "MyProfile") as! MyProfile
-            self.present(secondVC, animated:true, completion:nil)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let lost = storyBoard.instantiateViewController(withIdentifier: "LostController") as! LostController
+            self.present(lost, animated: true, completion: nil)
+            
         }else if(indexPath.row == 3){
             print(indexPath.row)
-            print(indexPath.row)
-            let secondVC = storyboard?.instantiateViewController(identifier: "MyProfile") as! MyProfile
-            self.present(secondVC, animated:true, completion:nil)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let found = storyBoard.instantiateViewController(withIdentifier: "FoundController") as! FoundController
+            self.present(found, animated: true, completion: nil)
         }else if(indexPath.row == 4){
             print(indexPath.row)
+            
         }
         
     }
