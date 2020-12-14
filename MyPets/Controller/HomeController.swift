@@ -82,7 +82,7 @@ class HomeController : UIViewController {
                     self.userDefaults.setValue(user?.email, forKey: "email")
                     self.userDefaults.setValue(user?.type, forKey: "type")
                   //  print(userR?.success!)
-                    self.valideProfile(id: user?.id, type: user?.type)
+                    self.valideProfile(user: user, type: user?.type)
                     
                     
                 }else{
@@ -104,10 +104,10 @@ class HomeController : UIViewController {
 }
     
     
-    func  valideProfile (id : String?,type :String?) {
+    func  valideProfile (user : User?,type :String?) {
         var  Url : String?
-       // Url = ""
-        let  data : [String:Any] = ["IdUser": id! ]
+      //  let  us : [String:Any] = ["name" : user?.name! ,"email" : user?.email!, "_id": user?.id!, "type": user?.type!]
+        let  data : [String:Any] = ["IdUser": user?.id! ]
         if (type?.elementsEqual("Abris") == true){
             Url = BASE_URL+"abri"
         } else if (type?.elementsEqual("Volontaires") == true){
@@ -128,6 +128,7 @@ class HomeController : UIViewController {
                     self.userDefaults.setValue(p?.telephone, forKey: "phone")
                     self.userDefaults.setValue(p?.image,forKey: "image")
                     print(profil!)
+                    print(profil?.profile?.IdUser!)
                     self.performSegue(withIdentifier: "mainHomeSegue", sender: "nil")
                 }else{
                     //mSegueProfile
