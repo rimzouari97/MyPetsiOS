@@ -19,7 +19,7 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
-        print(FoundController.Data.count)
+        
         
     }
     
