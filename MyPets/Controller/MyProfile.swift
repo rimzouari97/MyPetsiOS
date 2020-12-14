@@ -21,13 +21,19 @@ class MyProfile: UIViewController{
         present(sideMenu, animated: true)
     }
     
+    @IBAction func MyAnimals(_ sender: Any) {
+        performSegue(withIdentifier: "MyAnimals", sender: "nil")
+    }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         // Do any additional setup after loading the view.
+        
         
     }
 }
