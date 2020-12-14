@@ -54,11 +54,13 @@ class Profile: UIViewController{
     func  CreateProfile (Adresse: String?, telephon : String?  , image:String?) {
         
         let id = UserDefaults.standard.string(forKey: "id")
+        
+        
+       // let  us : [String:Any] = ["name" : name ,"email" : email, "_id": id, "type": type]
         let  data : [String:Any] = ["IdUser": id,"Adresse" : Adresse! ,"telephon" : telephon!, "image": image!]
         userDefaults.object(forKey: "Adresse")
         userDefaults.object(forKey: "phone")
         userDefaults.object(forKey: "image")
-     //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(url!+"/add", method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
                 switch (response.result){
@@ -70,7 +72,7 @@ class Profile: UIViewController{
                     self.userDefaults.setValue(p?.Adresse, forKey: "Adresse")
                     self.userDefaults.setValue(p?.telephone, forKey: "phone")
                     self.userDefaults.setValue(p?.image,forKey: "image")
-                    print(profil?.success!)
+                    print(profil?.profile!)
                     
                     self.performSegue(withIdentifier: "myProfile", sender: "nil")
                 }

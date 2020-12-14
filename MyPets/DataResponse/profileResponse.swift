@@ -49,3 +49,23 @@ class profile :Mappable{
     
     
 }
+
+class ListProfileResponse :Mappable {
+  
+    var success :Bool?
+    var message : String?
+    var profile : [profile]?
+    
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        success <- map["success"]
+        message <- map["message"]
+        profile <- map["volontaires"]
+        profile <- map["veterinaires"]
+        profile <- map["abris"]
+    }
+    
+}
