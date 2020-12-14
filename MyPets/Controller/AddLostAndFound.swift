@@ -51,10 +51,7 @@ class AddLostAndFound : UIViewController{
                     }else{
                         ViewController.ListFound()
                     }
-                    
-                    
-                    
-                    
+ 
                 }
                case .failure(let error):
                    print(error)

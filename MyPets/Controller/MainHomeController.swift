@@ -65,7 +65,10 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
-        //ListVetoController.ListVito()
+        
+        MyAnimals.ListAnimals()
+        
+        
         let name = UserDefaults.standard.string(forKey: "name")
         print("this user Defaults : " + name!)
         // Do any additional setup after loading the view.
