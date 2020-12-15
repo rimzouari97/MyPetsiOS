@@ -11,7 +11,7 @@ import SideMenu
 
 class MenuController: UITableViewController{
     
-   private var menuItems : [String] = ["Home","Profile","Lost","Found","List Veto","Logout"]
+   private var menuItems : [String] = ["Home","Profile","Lost","Found","Veterinarians","Shelters","Logout"]
     private let color = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
  
     init() {
@@ -25,7 +25,10 @@ class MenuController: UITableViewController{
         fatalError("init(coder:) has not been implemented")
     }
     override func viewDidLoad() {
-        ListVetoController.ListVito()
+        ListVetoController.ListVeto()
+        ListAbrisController.ListAbris()
+       // ViewController.ListFound()
+      //  ViewController.ListLost()
         super.viewDidLoad()
         tableView.backgroundColor = color
         view.backgroundColor = color
@@ -75,8 +78,13 @@ class MenuController: UITableViewController{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let found = storyBoard.instantiateViewController(withIdentifier: "ListVeto") as! ListVetoController
             self.present(found, animated: true, completion: nil)
+        }else if(indexPath.row == 5){
+            print(indexPath.row)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let found = storyBoard.instantiateViewController(withIdentifier: "ListAbris") as! ListAbrisController
+            self.present(found, animated: true, completion: nil)
         }
-        else if(indexPath.row == 5){
+        else if(indexPath.row == 6){
             print(indexPath.row)
             
         }

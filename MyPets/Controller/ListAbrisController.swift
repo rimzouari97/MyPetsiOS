@@ -1,16 +1,15 @@
 //
-//  ListVetoController.swift
+//  ListAbrisController.swift
 //  MyPets
 //
-//  Created by oussama on 12/13/20.
+//  Created by oussama on 12/14/20.
 //
 
-import  UIKit
+import UIKit
 import Alamofire
 import SideMenu
 
-class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataSource{
-    
+class ListAbrisController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     static var Data : [profile] = []
     
     private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
@@ -32,7 +31,7 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"mCellVeto")
+        let cell = tableView.dequeueReusableCell(withIdentifier:"mCellAbri")
         let contentView = cell?.contentView
         let imageView = contentView?.viewWithTag(1) as! UIImageView
         let name = contentView?.viewWithTag(2) as! UILabel
@@ -51,10 +50,10 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
     }
     
     
-    static func  ListVeto() {
+    static func  ListAbris () {
         
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
-        AF.request(BASE_URL+"abri/list", method: .post,  encoding: JSONEncoding.default)
+        AF.request(BASE_URL+"veterinaire/list", method: .post,  encoding: JSONEncoding.default)
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
@@ -64,10 +63,10 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
                     let profile = profils?.profile
                    // print(foundR?.count)
                   //  self.Data=foundR!
-                    ListAbrisController.Data.removeAll()
+                    ListVetoController.Data.removeAll()
                     for p in profile! {
                         print(p)
-                        ListAbrisController.Data.append(p)
+                        ListVetoController.Data.append(p)
                     }
                 }
                case .failure(let error):
@@ -77,10 +76,6 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
   
     
 }
-    
-    
-    
-    
     
     
 }
