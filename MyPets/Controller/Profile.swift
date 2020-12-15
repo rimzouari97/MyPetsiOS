@@ -18,6 +18,7 @@ class Profile: UIViewController{
     @IBOutlet weak var PhoneNumber: UITextField!
     
    
+    @IBOutlet weak var UpImage: UIImageView!
     @IBOutlet weak var UploadImage: UITextField!
     
     @IBAction func UploadButton(_ sender: UIButton) {
@@ -32,7 +33,7 @@ class Profile: UIViewController{
    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
         // Do any additional setup after loading the view.
         let type = UserDefaults.standard.string(forKey: "type")

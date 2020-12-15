@@ -26,6 +26,7 @@ class MenuController: UITableViewController{
     }
     override func viewDidLoad() {
         ListVetoController.ListVito()
+        MyAnimals.ListAnimals()
         super.viewDidLoad()
         tableView.backgroundColor = color
         view.backgroundColor = color

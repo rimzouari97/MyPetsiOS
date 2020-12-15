@@ -66,7 +66,7 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         
-        MyAnimals.ListAnimals()
+        
         
         
         let name = UserDefaults.standard.string(forKey: "name")

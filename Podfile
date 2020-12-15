@@ -10,7 +10,7 @@ target 'MyPets' do
       pod 'SwiftyJSON'
       pod 'Toast-Swift', '~> 5.0.0'
       pod 'SideMenu'
-      
+      pod 'AlamofireImage', '~> 4.1'
 
   # Pods for MyPets
 

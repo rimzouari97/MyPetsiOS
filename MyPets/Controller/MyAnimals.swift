@@ -14,6 +14,7 @@ class MyAnimals : UIViewController,UITableViewDelegate,UITableViewDataSource {
     static var Data : [Animal] = []
     
     @IBAction func AddAnimal(_ sender: Any) {
+        
         performSegue(withIdentifier: "AddAnimal", sender: "nil")
     }
     
@@ -21,10 +22,30 @@ class MyAnimals : UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let indexPath = sender as! IndexPath
+        let animal = MyAnimals.Data[ indexPath.row]
+       let destionation = segue.destination as! ProfileAnimal
+        print(animal.Name!)
+        destionation.name = animal.Name
+        destionation.race = animal.Race
+        destionation.id_user = animal.IdUser
+        destionation.type = animal.Type
+        destionation.id = animal.id
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MyAnimals.Data.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+       //let indexPath = sender as! IndexPath
+        let animal = MyAnimals.Data[ indexPath.row]
+       // let destionation = segue.destination as! ProfileAnimal
+        print(animal.Name!)
+        performSegue(withIdentifier: "cellDetails", sender: indexPath)
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

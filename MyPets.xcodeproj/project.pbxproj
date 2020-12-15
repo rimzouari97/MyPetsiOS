@@ -13,6 +13,7 @@
 		2054F4AE2569411E00D4FEF2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4AD2569411E00D4FEF2 /* RegisterController.swift */; };
 		20571BE7257EA366001F2D21 /* AddLostAndFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20571BE6257EA366001F2D21 /* AddLostAndFound.swift */; };
 		205945652572AED80071E3A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205945642572AED80071E3A1 /* Profile.swift */; };
+		205B39A6258848150049117C /* ProfileAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B39A5258848150049117C /* ProfileAnimal.swift */; };
 		205C17A4256977B400433574 /* Pods_MyPets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; };
 		205C17A5256977B400433574 /* Pods_MyPets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF22A2589849829EFE21B737 /* Pods_MyPets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		206A16492586BDBD0007F52E /* MyAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206A16482586BDBD0007F52E /* MyAnimals.swift */; };
@@ -83,6 +84,7 @@
 		2054F4AD2569411E00D4FEF2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		20571BE6257EA366001F2D21 /* AddLostAndFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLostAndFound.swift; sourceTree = "<group>"; };
 		205945642572AED80071E3A1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		205B39A5258848150049117C /* ProfileAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnimal.swift; sourceTree = "<group>"; };
 		206A16482586BDBD0007F52E /* MyAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimals.swift; sourceTree = "<group>"; };
 		206A164C2586C1B70007F52E /* AddAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimal.swift; sourceTree = "<group>"; };
 		206A16502586C99B0007F52E /* AnimalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsResponse.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				2935CED62586C24D0004320E /* ListVetoController.swift */,
 				206A16482586BDBD0007F52E /* MyAnimals.swift */,
 				206A164C2586C1B70007F52E /* AddAnimal.swift */,
+				205B39A5258848150049117C /* ProfileAnimal.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				20E58CAA25680F5800376ABE /* ViewController.swift in Sources */,
 				29DC1DE2257B07AD00C44B85 /* LostController.swift in Sources */,
 				206A16512586C99B0007F52E /* AnimalsResponse.swift in Sources */,
+				205B39A6258848150049117C /* ProfileAnimal.swift in Sources */,
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,

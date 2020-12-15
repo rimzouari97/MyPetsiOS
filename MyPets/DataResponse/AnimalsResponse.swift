@@ -62,7 +62,21 @@ class ListAnimal :Mappable{
         Animal <- map["Animal"]
     }
     
+    class DeleteAnimal :Mappable{
+        var success :Bool?
+        var message : String?
+        var Animal : [Animal]?
+       
+        
+        required init?(map: Map) {
+        }
+        
+        func mapping(map: Map) {
+            success <- map["success"]
+            message <- map["message"]
+            Animal <- map["Animal"]
+        }
     
     
 }
-
+}
