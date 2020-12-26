@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20328FC425887BE800B0840F /* AddAdoptionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328FC325887BE800B0840F /* AddAdoptionListController.swift */; };
+		20328FC82588810D00B0840F /* AdoptionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20328FC72588810D00B0840F /* AdoptionResponse.swift */; };
 		2032E066257307F000684C78 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E065257307F000684C78 /* Filter.swift */; };
 		2032E06825730DE700684C78 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032E06725730DE700684C78 /* Specification.swift */; };
 		2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054F4A82569410D00D4FEF2 /* MainHomeController.swift */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		1881B33447A9AD50B6CF4061 /* Pods-MyPets-MyPetsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets-MyPetsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPets-MyPetsUITests/Pods-MyPets-MyPetsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		20328FC325887BE800B0840F /* AddAdoptionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdoptionListController.swift; sourceTree = "<group>"; };
+		20328FC72588810D00B0840F /* AdoptionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionResponse.swift; sourceTree = "<group>"; };
 		2032E065257307F000684C78 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		2032E06725730DE700684C78 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
 		2054F4A82569410D00D4FEF2 /* MainHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				29607599257DA1DF0088464D /* LostAndfoundResponse.swift */,
 				29C684292585904900EA4A89 /* profileResponse.swift */,
 				206A16502586C99B0007F52E /* AnimalsResponse.swift */,
+				20328FC72588810D00B0840F /* AdoptionResponse.swift */,
 			);
 			path = DataResponse;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				206A16482586BDBD0007F52E /* MyAnimals.swift */,
 				206A164C2586C1B70007F52E /* AddAnimal.swift */,
 				205B39A5258848150049117C /* ProfileAnimal.swift */,
+				20328FC325887BE800B0840F /* AddAdoptionListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				29DC1DE2257B07AD00C44B85 /* LostController.swift in Sources */,
 				206A16512586C99B0007F52E /* AnimalsResponse.swift in Sources */,
 				205B39A6258848150049117C /* ProfileAnimal.swift in Sources */,
+				20328FC425887BE800B0840F /* AddAdoptionListController.swift in Sources */,
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
@@ -551,6 +558,7 @@
 				20852F00257A83E5005ABD42 /* APIManager.swift in Sources */,
 				29C6842A2585904900EA4A89 /* profileResponse.swift in Sources */,
 				2054F4A92569410D00D4FEF2 /* MainHomeController.swift in Sources */,
+				20328FC82588810D00B0840F /* AdoptionResponse.swift in Sources */,
 				29607596257D9F240088464D /* FoundController.swift in Sources */,
 				2032E06825730DE700684C78 /* Specification.swift in Sources */,
 			);

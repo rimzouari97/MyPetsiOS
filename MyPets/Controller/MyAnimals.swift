@@ -21,18 +21,20 @@ class MyAnimals : UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var listAnimals: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if(segue.identifier == "cellDetails"){
         let indexPath = sender as! IndexPath
         let animal = MyAnimals.Data[ indexPath.row]
        let destionation = segue.destination as! ProfileAnimal
         print(animal.Name!)
         destionation.name = animal.Name
         destionation.race = animal.Race
-        destionation.id_user = animal.IdUser
         destionation.type = animal.Type
         destionation.id = animal.id
-
+        destionation.image = animal.Image
+        }
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MyAnimals.Data.count
@@ -97,12 +99,4 @@ class MyAnimals : UIViewController,UITableViewDelegate,UITableViewDataSource {
                }
            }
 }
-    
-    
-    
-    
-    
-    
-    
-    
 }

@@ -53,10 +53,8 @@ class HomeController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        MainHomeController.ListAdoption()
         
-        
-        // Do any additional setup after loading the view.
-       // authenticate(user: "kk", password: "ddd")
     }
     
     func  authenticate (email : String  , password:String) {

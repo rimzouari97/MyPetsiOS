@@ -11,17 +11,35 @@ import Alamofire
 
 class ProfileAnimal : UIViewController {
     
+     var id :String?
      var name : String?
-    var race : String?
-    var type : String?
-    var id_user : String? = ""
-    var id :String?
+     var image :String?
+     var race : String?
+     var type : String?
+    
     @IBOutlet weak var picture: UIImageView!
 
     @IBAction func btntrash(_ sender: Any) {
         deleteAnimal(id : id!)
     }
     
+    
+    @IBAction func btnAdoption(_ sender: Any) {
+        print("adoption")
+        performSegue(withIdentifier: "mSegueAdoption", sender: "nil")
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+       let destionation = segue.destination as! AddAdoptionListController
+        print(name!)
+        destionation.name = name
+        destionation.id = id
+       // destionation.image = image
+
+    }
     
     @IBOutlet weak var desc: UITextView!
     
