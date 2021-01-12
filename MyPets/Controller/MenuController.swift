@@ -29,7 +29,7 @@ class MenuController: UITableViewController{
         ListVetoController.ListVeto()
         ListAbrisController.ListAbris()
         ViewController.ListFound()
-        ViewController.ListLost()
+        ViewController.ListLost1()
         super.viewDidLoad()
         tableView.backgroundColor = color
         view.backgroundColor = color
@@ -65,6 +65,7 @@ class MenuController: UITableViewController{
             self.present(myprofile, animated: true, completion: nil)
         }else if(indexPath.row == 2){
             print(indexPath.row)
+            ViewController.ListLost1()
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let lost = storyBoard.instantiateViewController(withIdentifier: "LostController") as! LostController
             self.present(lost, animated: true, completion: nil)

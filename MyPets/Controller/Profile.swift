@@ -66,14 +66,14 @@ class Profile: UIViewController{
                .responseString { response in
                 switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                    let profil = profileResponse(JSONString: "\(responseString)")
                 if((profil?.success!) != false){
                 let p = profil?.profile
                     self.userDefaults.setValue(p?.Adresse, forKey: "Adresse")
                     self.userDefaults.setValue(p?.telephone, forKey: "phone")
                     self.userDefaults.setValue(p?.image,forKey: "image")
-                    print(profil?.profile!)
+                  //  print(profil?.profile!)
                     
                     self.performSegue(withIdentifier: "myProfile", sender: "nil")
                 }

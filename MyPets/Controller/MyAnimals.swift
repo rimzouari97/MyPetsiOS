@@ -88,7 +88,7 @@ class MyAnimals : UIViewController,UITableViewDelegate,UITableViewDataSource {
                   //  self.Data=foundR!
                     MyAnimals.Data.removeAll()
                     for anim in animalR! {
-                        print(anim)
+                    //    print(anim)
                         MyAnimals.Data.append(anim)
                     }
                    // print(self.Data.count)

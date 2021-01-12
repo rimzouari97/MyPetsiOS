@@ -40,13 +40,13 @@ class AddLostAndFound : UIViewController{
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+               //    print(responseString)
                    let lostR = LostAndFoundResponse(JSONString: "\(responseString)")
                 if((lostR?.success!) != false){
                     let lost = lostR?.LostAndFound
-                    print(lost!)
+                //    print(lost!)
                     if((AddLostAndFound.type?.elementsEqual("Lost")) != nil){
-                        ViewController.ListLost()
+                        ViewController.ListLost1()
                         
                     }else{
                         ViewController.ListFound()

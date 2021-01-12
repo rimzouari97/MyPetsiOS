@@ -35,17 +35,17 @@ class AddAdoptionListController: UIViewController {
     func  addAdoption(desc : String) {
         let idu = UserDefaults.standard.string(forKey: "id")
         
-        let  data : [String:Any] = ["IdAnimal" : id, "Image": image,"IdUser" : idu,"nameAnimal": name,"Description":desc,"valide":false]
+        let  data : [String:Any] = ["IdAnimal" : id, "image": image,"IdUser" : idu,"nameAnimal": name,"Description":desc,"valide":false]
     
         AF.request(BASE_URL+"adoption/add", method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                    let adoption = AdoptionResponse(JSONString: "\(responseString)")
                 if((adoption?.success!) != false){
                     let adop = adoption?.adoption
-                    print(adop!)
+                //    print(adop!)
                     MainHomeController.ListAdoption()
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let profileAnimal = storyBoard.instantiateViewController(withIdentifier: "ProfileAnimal") as! ProfileAnimal

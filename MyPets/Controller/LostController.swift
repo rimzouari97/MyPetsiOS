@@ -46,6 +46,8 @@ class LostController :UIViewController,UITableViewDataSource,UITableViewDelegate
     private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController.ListLost1()
+        
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)

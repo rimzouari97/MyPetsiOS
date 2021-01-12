@@ -102,7 +102,13 @@ class AddAnimal : UIViewController, UITableViewDelegate,UITableViewDataSource {
                    let animalR = AnimalsResponse(JSONString: "\(responseString)")
                 if((animalR?.success!) != false){
                     let anim = animalR?.Animal
+                    MyAnimals.ListAnimals()
                     print(animalR!)
+                    
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let found = storyBoard.instantiateViewController(withIdentifier: "MyAnimals") as! MyAnimals
+                    self.present(found, animated: true, completion: nil)
+                 
                     
                 }
                case .failure(let error):

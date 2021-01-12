@@ -23,19 +23,7 @@ class HomeController : UIViewController {
     
     @IBAction func Login(_ sender: Any) {
       authenticate(email: Email.text! ,password: Password.text! )
-      /*  if(self.res == true){
-        performSegue(withIdentifier: "mainHomeSegue", sender: "nil")
-        }
-        else{
-            self.view.makeToast("Mail or Password incorrect", duration: 2.0, point: CGPoint(x: 200.0, y: 750.0), title: "Alert", image: UIImage(named: "logo.png")) { didTap in
-                if didTap {
-                    print("completion from tap")
-                } else {
-                    print("completion without tap")
-                }
-            }
-    }
- */
+ 
     }
     
     

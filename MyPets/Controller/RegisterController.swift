@@ -163,14 +163,14 @@ class RegisterController : UIViewController {
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                    let userR = UserResponse(JSONString: "\(responseString)")
                 if((userR?.success!) != false){
                 let user = userR?.user
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     self.userDefaults.setValue(user?.email, forKey: "email")
                     self.userDefaults.setValue(user?.type, forKey: "type")
-                    print(userR?.success!)
+                   // print(userR?.success!)
                     self.performSegue(withIdentifier: "signUp", sender: "nil")
                 }
                case .failure(let error):

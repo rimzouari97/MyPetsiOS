@@ -39,7 +39,7 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         let label = contentView?.viewWithTag(2) as! UILabel
         let imageView = contentView?.viewWithTag(1) as! UIImageView
         
-        textView.text = MainHomeController.Data[indexPath.row].Description!
+//        textView.text = MainHomeController.Data[indexPath.row].Description!
         imageView.image = UIImage(named: "poki")
         label.text = MainHomeController.Data[indexPath.row].nameAnimal!
         
@@ -79,7 +79,7 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
                    let adoptions = ListAdoptionsResponse(JSONString: "\(responseString)")
                 if((adoptions?.success!) != false){
                 let adopt = adoptions?.adoptions
-                   // print(foundR?.count)
+                    print(adopt?.count)
                   //  self.Data=foundR!
                     MyAnimals.Data.removeAll()
                     for ado in adopt! {

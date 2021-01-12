@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        ViewController.ListFound()
-        ViewController.ListLost()
+      //  ViewController.ListFound()
+      //  ViewController.ListLost()
       
         
         
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
   
     
 }
-    static func  ListLost () {
+    static func  ListLost1 () {
         
      //   let serializer = DataResponseSerializer(emptyResponseCodes:Set([200,204,205]))
         AF.request(BASE_URL+"lostAndFound/getLost", method: .post,  encoding: JSONEncoding.default)
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                   //  self.Data=foundR!
                     for lost in lostR! {
                         print(lost)
-                        LostController.Data.append(lost)
+                    //    LostController.Data.append(lost)
                     }
                    // print(self.Data.count)
                    // self.performSegue(withIdentifier: "signUp", sender: "nil")

@@ -66,7 +66,7 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
                   //  self.Data=foundR!
                     ListAbrisController.Data.removeAll()
                     for p in profile! {
-                        print(p)
+                    //    print(p)
                         ListAbrisController.Data.append(p)
                     }
                 }

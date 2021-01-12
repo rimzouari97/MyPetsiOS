@@ -59,12 +59,12 @@ class ProfileAnimal : UIViewController {
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                 let animals = AnimalsResponse(JSONString: "\(responseString)")
                 if((animals?.success!) != false){
                 
                     MyAnimals.ListAnimals()
-                    print(MyAnimals.Data	)
+                 //   print(MyAnimals.Data	)
                     self.performSegue(withIdentifier: "deleteAnimal", sender: nil)
                     
                 }

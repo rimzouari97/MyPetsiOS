@@ -39,7 +39,7 @@ class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSour
         
       //  label.text = Data1[indexPath.row]
         label.text = FoundController.Data[indexPath.row].Desc
-        print(FoundController.Data[indexPath.row].Desc)
+      //  print(FoundController.Data[indexPath.row].Desc)
         imageView.image = UIImage(named:"poki")
        // imageView.image = UIImage(named: Data[indexPath.row].)
         
@@ -53,6 +53,7 @@ class FoundController : UIViewController,UITableViewDelegate,UITableViewDataSour
     private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController.ListFound()
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
