@@ -81,8 +81,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="G6X-Yz-bot"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DzJ-Lj-fOQ">
                                 <rect key="frame" x="27" y="451" width="360" height="34"/>
@@ -110,8 +110,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-he-T4e">
-                                <rect key="frame" x="105" y="508" width="177" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-he-T4e">
+                                <rect key="frame" x="27" y="508" width="360" height="49"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FVp-ff-S0R"/>
@@ -136,8 +136,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3N-AM-ZMS">
-                                <rect key="frame" x="37" y="572" width="340" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3N-AM-ZMS">
+                                <rect key="frame" x="27" y="572" width="360" height="48"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dZ5-63-Goq"/>
@@ -147,7 +147,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-Ja-6uh">
-                                <rect key="frame" x="105" y="706" width="177" height="35"/>
+                                <rect key="frame" x="27" y="706" width="360" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="aW3-Ex-zKv"/>
@@ -343,7 +343,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shD-Mw-S3Q">
-                                <rect key="frame" x="151" y="769" width="110" height="30"/>
+                                <rect key="frame" x="39" y="755" width="337" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL4-TQ-o2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4342" y="656"/>
+            <point key="canvasLocation" x="4340.579710144928" y="655.58035714285711"/>
         </scene>
         <!--Profile-->
         <scene sceneID="xO3-zC-uGt">
@@ -1908,8 +1908,8 @@ Address</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rIl-P4-pU8"/>
-        <segue reference="l9W-8P-C8w"/>
-        <segue reference="XrM-As-ZEz"/>
+        <segue reference="e7T-US-JHS"/>
+        <segue reference="EqC-aV-xEX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83982351040000003" green="0.83982351040000003" blue="0.83982351040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

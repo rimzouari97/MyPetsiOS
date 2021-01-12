@@ -59,7 +59,7 @@ class ListAdoptionsResponse :Mappable{
     
     func mapping(map: Map) {
         success <- map["success"]
-        adoptions <- map["adoptions"]
+        adoptions <- map["adoption"]
     }
     
     
