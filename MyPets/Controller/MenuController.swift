@@ -25,10 +25,11 @@ class MenuController: UITableViewController{
         fatalError("init(coder:) has not been implemented")
     }
     override func viewDidLoad() {
+        MyAnimals.ListAnimals()
         ListVetoController.ListVeto()
         ListAbrisController.ListAbris()
-       // ViewController.ListFound()
-      //  ViewController.ListLost()
+        ViewController.ListFound()
+        ViewController.ListLost()
         super.viewDidLoad()
         tableView.backgroundColor = color
         view.backgroundColor = color

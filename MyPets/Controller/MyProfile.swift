@@ -16,7 +16,8 @@ class MyProfile: UIViewController{
     
     private let sideMenu = SideMenuNavigationController(rootViewController: MenuController())
  
-  
+    @IBOutlet weak var descrip: UITextView!
+    
     @IBAction func menu(_ sender: Any) {
         present(sideMenu, animated: true)
     }
@@ -32,6 +33,9 @@ class MyProfile: UIViewController{
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
+        
+        
+        descrip.text = UserDefaults.standard.string(forKey: "name")
         // Do any additional setup after loading the view.
         
         

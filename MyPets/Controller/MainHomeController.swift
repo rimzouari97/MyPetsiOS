@@ -8,19 +8,12 @@
 import UIKit
 import SideMenu
 import EventKitUI
+import Alamofire
 
 
 class MainHomeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
    
-    
-   
-    //var menu : SideMenuNavigationController?
-    
-  
-    var animals = [""]
-    
-
-    
+    static var Data : [Adoption] = []
     
     @IBOutlet weak var bar: UINavigationBar!
     
@@ -29,31 +22,27 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func filter(_ sender: Any) {
         performSegue(withIdentifier: "FilterSegue", sender: "nil")
     }
-  
-   
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return MainHomeController.Data.count
     }
-    
-    func numberOfSections (in tableView: UITableView) -> Int {
-        return 1
-    }
-  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Acell")
-       /* let contentView = cell?.contentView
-        let textView = contentView?.viewWithTag(1) as! UITextView
-        let imageView = contentView?.viewWithTag(2) as! UIImageView
+        let contentView = cell?.contentView
+        let textView = contentView?.viewWithTag(3) as! UITextView
+        let label = contentView?.viewWithTag(2) as! UILabel
+        let imageView = contentView?.viewWithTag(1) as! UIImageView
         
-        textView.text = animals[indexPath.row]
-        imageView.image = UIImage(named: animals[indexPath.row])
-        */
+        textView.text = MainHomeController.Data[indexPath.row].Description!
+        imageView.image = UIImage(named: "poki")
+        label.text = MainHomeController.Data[indexPath.row].nameAnimal!
+        
         return cell!
     }
 
@@ -65,10 +54,7 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         sideMenu.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = sideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
-        
-        MyAnimals.ListAnimals()
-        
-        
+  
         let name = UserDefaults.standard.string(forKey: "name")
         print("this user Defaults : " + name!)
         // Do any additional setup after loading the view.
@@ -81,6 +67,33 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         present(sideMenu, animated: true)
     
     }
+    
+    
+    static func  ListAdoption () {
+        
+        AF.request(BASE_URL+"adoption/list", method: .post,  encoding: JSONEncoding.default)
+               .responseString { response in
+               switch (response.result){
+               case .success(let responseString):
+                   print(responseString)
+                   let adoptions = ListAdoptionsResponse(JSONString: "\(responseString)")
+                if((adoptions?.success!) != false){
+                let adopt = adoptions?.adoptions
+                   // print(foundR?.count)
+                  //  self.Data=foundR!
+                    MyAnimals.Data.removeAll()
+                    for ado in adopt! {
+                        print(ado)
+                        MainHomeController.Data.append(ado)
+                    }
+                   // print(self.Data.count)
+                   // self.performSegue(withIdentifier: "signUp", sender: "nil")
+                }
+               case .failure(let error):
+                   print(error)
+               }
+           }
+}
   
    
 }
