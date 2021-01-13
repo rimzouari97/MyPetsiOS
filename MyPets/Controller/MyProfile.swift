@@ -35,9 +35,21 @@ class MyProfile: UIViewController{
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         
         
-        descrip.text = UserDefaults.standard.string(forKey: "name")
+        //descrip.text = UserDefaults.standard.string(forKey: "name")
         // Do any additional setup after loading the view.
         
         
     }
+    
+    
+    @IBOutlet weak var pic: UIImageView!
+    
+    @IBOutlet weak var namepic: UILabel!
+    
+    @IBAction func addanim(_ sender: Any) {
+    }
+    @IBAction func addfav(_ sender: Any) {
+    }
+    
+    
 }
