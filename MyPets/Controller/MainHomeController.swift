@@ -74,9 +74,12 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == "ProfileAnimSegue"){
+         
             let dd = sender as! Adoption
+            print(dd.nameAnimal)
+            print(dd.Description)
             let des = segue.destination as! AdoptionProfile
-            des.adoption = dd;
+            des.adoption = dd
             
         }
         

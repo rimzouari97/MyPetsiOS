@@ -17,8 +17,8 @@ class ViewController: UIViewController {
    
     
     @IBAction func login(_ sender: Any) {
-        let id  = userDefaults.string(forKey: "id")
-       
+        let id  = userDefaults.string(forKey: "phone")
+       print(id)
         if (id == nil) 	{
             performSegue(withIdentifier: "login", sender: "nil")
         }else{

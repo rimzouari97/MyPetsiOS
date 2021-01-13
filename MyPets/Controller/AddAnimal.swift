@@ -14,10 +14,11 @@ class AddAnimal : UIViewController , UIImagePickerControllerDelegate, UINavigati
 
     
     
+    
     @IBOutlet weak var name: UITextField!
     
+    
     @IBOutlet weak var race: UITextField!
- 
     
     @IBOutlet weak var uploadImage: UIImageView!
     	
@@ -152,9 +153,7 @@ class AddAnimal : UIViewController , UIImagePickerControllerDelegate, UINavigati
                     MyAnimals.ListAnimals()
                     print(animalR!)
                     
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let found = storyBoard.instantiateViewController(withIdentifier: "MyAnimals") as! MyAnimals
-                    self.present(found, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "ShowAddAnim", sender: "nil")
                  
                     
                 }

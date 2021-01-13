@@ -15,9 +15,9 @@ class AdoptionProfile : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageAdop.image = UIImage(named: "poki")
+      //  imageAdop.image = UIImage(named: "poki")
         nameAdop.text = adoption?.nameAnimal
-        DescAdop.text = adoption?.Description;
+        DescAdop.text = adoption?.Description
         
         
     }

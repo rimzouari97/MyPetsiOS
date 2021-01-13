@@ -27,8 +27,8 @@ class Profile: UIViewController{
     
     @IBAction func MyProfileBtn(_ sender: Any) {
 
-        
-        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image: UploadImage.text)
+        let img = "imageProfile" // UploadImage.text
+        CreateProfile(Adresse: Address.text, telephon: PhoneNumber.text, image:img)
     }
    
     override func viewDidLoad() {
