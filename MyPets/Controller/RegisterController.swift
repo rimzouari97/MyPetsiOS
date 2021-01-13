@@ -18,7 +18,8 @@ class RegisterController : UIViewController {
     
     @IBOutlet weak var shelterBtn: UIButton!
     
-    @IBAction func volunteerBtnAction(_ sender: UIButton) {if sender.isSelected{
+    @IBAction func volunteerBtnAction(_ sender: UIButton) {
+        if sender.isSelected{
         sender.isSelected = false
         veterinarianBtn.isSelected = false
         shelterBtn.isSelected = false
@@ -167,6 +168,7 @@ class RegisterController : UIViewController {
                    let userR = UserResponse(JSONString: "\(responseString)")
                 if((userR?.success!) != false){
                 let user = userR?.user
+                    self.userDefaults.setValue(user?.id, forKey: "id")
                     self.userDefaults.setValue(user?.name, forKey: "name")
                     self.userDefaults.setValue(user?.email, forKey: "email")
                     self.userDefaults.setValue(user?.type, forKey: "type")

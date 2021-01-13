@@ -9,12 +9,24 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
+    
+    
+    let userDefaults = UserDefaults.standard
 
    
    
     
     @IBAction func login(_ sender: Any) {
-        performSegue(withIdentifier: "login", sender: "nil")
+        let id  = userDefaults.string(forKey: "id")
+       
+        if (id == nil) 	{
+            performSegue(withIdentifier: "login", sender: "nil")
+        }else{
+       
+        performSegue(withIdentifier: "mSegueHome", sender: "nil")
+        }
+        
+        
     }
     
     
@@ -27,9 +39,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
-      //  ViewController.ListFound()
-      //  ViewController.ListLost()
+     //   ViewController.ListFound()
+      //  ViewController.ListLost1()
+        MainHomeController.ListAdoption()
       
         
         
@@ -42,7 +57,7 @@ class ViewController: UIViewController {
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                 //  print(responseString)
                    let Found = ListLostAndFound(JSONString: "\(responseString)")
                 if((Found?.success!) != false){
                 let foundR = Found?.LostAndFound
@@ -69,15 +84,15 @@ class ViewController: UIViewController {
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                    let Found = ListLostAndFound(JSONString: "\(responseString)")
                 if((Found?.success!) != false){
                 let lostR = Found?.LostAndFound
                    // print(foundR?.count)
                   //  self.Data=foundR!
                     for lost in lostR! {
-                        print(lost)
-                    //    LostController.Data.append(lost)
+                     //   print(lost)
+                        LostController.Data.append(lost)
                     }
                    // print(self.Data.count)
                    // self.performSegue(withIdentifier: "signUp", sender: "nil")

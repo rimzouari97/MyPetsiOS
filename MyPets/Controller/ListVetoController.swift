@@ -43,7 +43,7 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
         address.text = ListVetoController.Data[indexPath.row].Adresse
         name.text = ListVetoController.Data[indexPath.row].IdUser
         phone.text = ListVetoController.Data[indexPath.row].telephone
-        print(ListVetoController.Data[indexPath.row].Adresse)
+       // print(ListVetoController.Data[indexPath.row].Adresse)
         imageView.image = UIImage(named:"poki")
        // imageView.image = UIImage(named: Data[indexPath.row].)
         
@@ -58,7 +58,7 @@ class ListVetoController :UIViewController ,UITableViewDelegate,UITableViewDataS
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                //   print(responseString)
                    let profils = ListProfileResponse(JSONString: "\(responseString)")
                 if((profils?.success!) != false){
                     let profile = profils?.profile

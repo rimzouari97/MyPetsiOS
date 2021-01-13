@@ -13,6 +13,7 @@ class MenuController: UITableViewController{
     
    private var menuItems : [String] = ["Home","Profile","Lost","Found","Veterinarians","Shelters","Logout"]
     private let color = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+    let userDefaults = UserDefaults.standard
  
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -88,6 +89,16 @@ class MenuController: UITableViewController{
         }
         else if(indexPath.row == 6){
             print(indexPath.row)
+            
+            let domain = Bundle.main.bundleIdentifier!
+            userDefaults.removePersistentDomain(forName: domain)
+            userDefaults.synchronize()
+            print(Array(userDefaults.dictionaryRepresentation().keys).count)
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let found = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.present(found, animated: true, completion: nil)
+            
             
         }
         

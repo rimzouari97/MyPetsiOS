@@ -54,11 +54,12 @@ class HomeController : UIViewController {
         userDefaults.object(forKey: "Adresse")
         userDefaults.object(forKey: "phone")
         userDefaults.object(forKey: "image")
+        userDefaults.object(forKey: "id")
         AF.request(BASE_URL+"users/auth", method: .post, parameters: data, encoding: JSONEncoding.default)
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                  // print(responseString)
                    let userR = UserResponse(JSONString: "\(responseString)")
                 if((userR?.success!) != false){
                  self.res = true

@@ -24,9 +24,6 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
     }
 
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainHomeController.Data.count
@@ -39,7 +36,7 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
         let label = contentView?.viewWithTag(2) as! UILabel
         let imageView = contentView?.viewWithTag(1) as! UIImageView
         
-//        textView.text = MainHomeController.Data[indexPath.row].Description!
+        textView.text = MainHomeController.Data[indexPath.row].Description!
         imageView.image = UIImage(named: "poki")
         label.text = MainHomeController.Data[indexPath.row].nameAnimal!
         
@@ -68,6 +65,23 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
     
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let adop = MainHomeController.Data[indexPath.row]
+        performSegue(withIdentifier: "ProfileAnimSegue", sender: adop)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "ProfileAnimSegue"){
+            let dd = sender as! Adoption
+            let des = segue.destination as! AdoptionProfile
+            des.adoption = dd;
+            
+        }
+        
+    }
+    
     
     static func  ListAdoption () {
         
@@ -79,9 +93,9 @@ class MainHomeController : UIViewController, UITableViewDataSource, UITableViewD
                    let adoptions = ListAdoptionsResponse(JSONString: "\(responseString)")
                 if((adoptions?.success!) != false){
                 let adopt = adoptions?.adoptions
-                    print(adopt?.count)
-                  //  self.Data=foundR!
-                    MyAnimals.Data.removeAll()
+                  //  print(adopt?.count)
+                    
+                    MainHomeController.Data.removeAll()
                     for ado in adopt! {
                         print(ado)
                         MainHomeController.Data.append(ado)

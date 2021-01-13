@@ -57,7 +57,7 @@ class ListAbrisController: UIViewController,UITableViewDelegate,UITableViewDataS
                .responseString { response in
                switch (response.result){
                case .success(let responseString):
-                   print(responseString)
+                 //  print(responseString)
                    let profils = ListProfileResponse(JSONString: "\(responseString)")
                 if((profils?.success!) != false){
                     let profile = profils?.profile

@@ -42,6 +42,8 @@
 		29607596257D9F240088464D /* FoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29607595257D9F240088464D /* FoundController.swift */; };
 		2960759A257DA1DF0088464D /* LostAndfoundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29607599257DA1DF0088464D /* LostAndfoundResponse.swift */; };
 		2980D73E25881BB300E89828 /* ListAbrisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980D73D25881BB300E89828 /* ListAbrisController.swift */; };
+		29870D2625AE5D02007813AB /* AdoptionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29870D2525AE5D02007813AB /* AdoptionProfile.swift */; };
+		29870D2A25AE6609007813AB /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29870D2925AE6609007813AB /* ImageResponse.swift */; };
 		29C6842A2585904900EA4A89 /* profileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C684292585904900EA4A89 /* profileResponse.swift */; };
 		29DC1DE2257B07AD00C44B85 /* LostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DC1DE1257B07AD00C44B85 /* LostController.swift */; };
 		E33064171B2825F8603B354B /* Pods_MyPetsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87143A8A98D4BC3A70D4782 /* Pods_MyPetsTests.framework */; };
@@ -122,6 +124,8 @@
 		29607595257D9F240088464D /* FoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundController.swift; sourceTree = "<group>"; };
 		29607599257DA1DF0088464D /* LostAndfoundResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostAndfoundResponse.swift; sourceTree = "<group>"; };
 		2980D73D25881BB300E89828 /* ListAbrisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAbrisController.swift; sourceTree = "<group>"; };
+		29870D2525AE5D02007813AB /* AdoptionProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptionProfile.swift; sourceTree = "<group>"; };
+		29870D2925AE6609007813AB /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		29C684292585904900EA4A89 /* profileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileResponse.swift; sourceTree = "<group>"; };
 		29DC1DE1257B07AD00C44B85 /* LostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostController.swift; sourceTree = "<group>"; };
 		33D3C7315FBE40A50C7381DC /* Pods-MyPets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPets.debug.xcconfig"; path = "Target Support Files/Pods-MyPets/Pods-MyPets.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				29C684292585904900EA4A89 /* profileResponse.swift */,
 				206A16502586C99B0007F52E /* AnimalsResponse.swift */,
 				20328FC72588810D00B0840F /* AdoptionResponse.swift */,
+				29870D2925AE6609007813AB /* ImageResponse.swift */,
 			);
 			path = DataResponse;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				206A164C2586C1B70007F52E /* AddAnimal.swift */,
 				205B39A5258848150049117C /* ProfileAnimal.swift */,
 				20328FC325887BE800B0840F /* AddAdoptionListController.swift */,
+				29870D2525AE5D02007813AB /* AdoptionProfile.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29870D2A25AE6609007813AB /* ImageResponse.swift in Sources */,
 				20D42B5825695319002B3137 /* Authentification.swift in Sources */,
 				20852F36257B12B5005ABD42 /* MyProfile.swift in Sources */,
 				206A16492586BDBD0007F52E /* MyAnimals.swift in Sources */,
@@ -547,6 +554,7 @@
 				20328FC425887BE800B0840F /* AddAdoptionListController.swift in Sources */,
 				20E58CB025680F5800376ABE /* MyPets.xcdatamodeld in Sources */,
 				20E58CA625680F5800376ABE /* AppDelegate.swift in Sources */,
+				29870D2625AE5D02007813AB /* AdoptionProfile.swift in Sources */,
 				20E58CA825680F5800376ABE /* SceneDelegate.swift in Sources */,
 				206A164D2586C1B70007F52E /* AddAnimal.swift in Sources */,
 				2960759A257DA1DF0088464D /* LostAndfoundResponse.swift in Sources */,
